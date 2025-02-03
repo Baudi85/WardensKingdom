@@ -1,0 +1,126 @@
+{
+	"format_version": "1.10.0",
+	
+	"animation_controllers": {
+		"controller.animation.sculk_creeper.walk": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						{
+							"walking": "math.min(1.0, query.modified_move_speed * 10)"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.sculk_creeper.rings": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						{
+							"sculk_rings": "math.min(1.0, query.modified_move_speed * 10)"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.sculk_creeper.turn": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						{
+							"turning": "query.yaw_speed > 0.35"
+						}
+					],
+					"transitions" : [
+						{
+							"walking" : "query.is_moving"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"walking" : {
+					"animations" : [ "walking" ],
+					"transitions" : [
+						{
+							"default" : "math.min(1.0, query.modified_move_speed * 10)"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.sculk_creeper.turn_two": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						{
+							"turning": "query.yaw_speed < -0.35"
+						}
+					],
+					"transitions" : [
+						{
+							"walking" : "query.is_moving"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"walking" : {
+					"animations" : [ "walking" ],
+					"transitions" : [
+						{
+							"default" : "math.min(1.0, query.modified_move_speed * 10)"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.sculk_creeper.digout": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"sculck_summon"
+					],
+					"blend_transition": 0.4
+				}
+			}
+		},
+		"controller.animation.sculk_creeper.hurt" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"hurting" : "query.hurt_time > 0"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"hurting" : {
+					"animations" : [ "sculck_hurt"	],
+					"transitions" : [
+						{
+							"default" : "query.hurt_time <= 0"
+						}
+					],
+					"blend_transition": 0.4
+				}
+			}
+		},
+		"controller.animation.sculk_creeper.general": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"sculck_general"
+					],
+					"blend_transition": 0.4
+				}
+			}
+		}
+	}
+}

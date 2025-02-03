@@ -1,0 +1,90 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.dragon_xp",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "sculk_xp",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "rotator",
+					"parent": "sculk_xp",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "outerglass",
+					"parent": "rotator",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, -8, -8], "size": [16, 16, 16], "uv": [48, 16]}
+					]
+				},
+				{
+					"name": "inner_rotator",
+					"parent": "outerglass",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "innerglass",
+					"parent": "inner_rotator",
+					"pivot": [0, 0, 0],
+					"rotation": [0, 0, -45],
+					"cubes": [
+						{"origin": [-8, -8, -8], "size": [16, 16, 16], "uv": [0, 32]}
+					]
+				},
+				{
+					"name": "crystal_rotator",
+					"parent": "innerglass",
+					"pivot": [0, 0, 0],
+					"rotation": [0, 45, 0]
+				},
+				{
+					"name": "crystal",
+					"parent": "crystal_rotator",
+					"pivot": [0, 0, 0],
+					"rotation": [-30.24357, 7.45844, 31.06072],
+					"cubes": [
+						{"origin": [-8, -8, -8], "size": [16, 16, 16], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "base_rotate",
+					"parent": "sculk_xp",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "base",
+					"parent": "base_rotate",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, 8], "size": [16, 8, 0], "pivot": [0, 0, 0], "rotation": [-180, 0, 180], "uv": [48, 64]},
+						{"origin": [-8, 0, -8], "size": [0, 8, 16], "pivot": [0, 0, 0], "rotation": [-180, 0, 180], "uv": [80, 48]},
+						{"origin": [8, 0, -8], "size": [0, 8, 16], "pivot": [0, 0, 0], "rotation": [-180, 0, 180], "uv": [80, 48]},
+						{"origin": [-8, 0, -8], "size": [16, 8, 0], "pivot": [0, 0, 0], "rotation": [-180, 0, 180], "uv": [48, 64]}
+					]
+				},
+				{
+					"name": "base2",
+					"parent": "base_rotate",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8.08, -0.04, 8.08], "size": [16.16, 8.08, 0], "pivot": [0, -0.04, 0], "rotation": [-180, 0, 180], "uv": [48, 64]},
+						{"origin": [-8.08, -0.04, -8.08], "size": [0, 8.08, 16.16], "pivot": [0, -0.04, 0], "rotation": [-180, 0, 180], "uv": [80, 48]},
+						{"origin": [8.08, -0.04, -8.08], "size": [0, 8.08, 16.16], "pivot": [0, -0.04, 0], "rotation": [-180, 0, 180], "uv": [80, 48]},
+						{"origin": [-8.08, -0.04, -8.08], "size": [16.16, 8.08, 0], "pivot": [0, -0.04, 0], "rotation": [-180, 0, 180], "uv": [48, 64]}
+					]
+				}
+			]
+		}
+	]
+}

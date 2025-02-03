@@ -1,0 +1,48 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.ram.baby_transform": {
+			"loop": true,
+			"bones": {
+				"horn1": {
+					"scale": [0, 0, 0]
+				},
+				"body1": {
+					"position": [0, -4, 0]
+				},
+				"head": {
+					"position": [0, -4, 0],
+					"scale": [1, 0.8, 1]
+				},
+				"leg0": {
+					"position": [0, -4, 0],
+					"scale": [1, 0.7, 1]
+				},
+				"leg2": {
+					"position": [0, -4, 0],
+					"scale": [1, 0.7, 1]
+				},
+				"leg3": {
+					"position": [0, -4, 0],
+					"scale": [1, 0.7, 1]
+				},
+				"leg1": {
+					"position": [0, -4, 0],
+					"scale": [1, 0.7, 1]
+				},
+				"bodybits": {
+					"position": [0, -4, 0]
+				},
+				"horn2": {
+					"scale": [0, 0, 0]
+				}
+			}
+		},
+		"animation.ram.setup": {
+			"loop": true
+		},
+		"animation.ram.setup.v1.0": {
+			"loop": true
+		}
+	}
+}

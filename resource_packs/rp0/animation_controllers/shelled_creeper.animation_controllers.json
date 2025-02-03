@@ -1,0 +1,29 @@
+{
+  "format_version": "1.8.0",
+  "animation_controllers": {
+    "controller.animation.creeper.head": {
+      "states": {
+        "default": {
+          "animations": [ { "creeper_head": [] } ]
+        }
+      }
+    },
+    "controller.animation.shelled_creeper.legs": {
+      "states": {
+        "default": {
+          "animations": [ { "creeper_legs": [] } ]
+        }
+      }
+    },
+    "controller.animation.creeper.move": {
+      "states": {
+        "default": {
+          "animations": [
+            { "move": [] },
+            { "look_at_target": [] }
+          ]
+        }
+      }
+    }
+  }
+}

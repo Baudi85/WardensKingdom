@@ -1,0 +1,29 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "g2crafted:firefly",
+      "materials": { "default": "enderman" },
+      "textures": {
+        "default": "textures/entity/firefly/firefly"
+      },
+      "geometry": {
+        "default": "geometry.firefly"
+      },
+      "animations": {
+        "firefly_base_pose": "animation.firefly.base_pose"
+      },
+      "animation_controllers": [
+        { "firefly_base_pose": "controller.animation.firefly.base_pose" }
+      ],
+      "particle_effects": {
+        "firefly_dust": "g2crafted:firefly_trail_particle"
+      },
+      "render_controllers": [ "controller.render.firefly" ],
+      "spawn_egg": {
+        "base_color": "#FFFF00",
+        "overlay_color": "#D5FF00"
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "g2crafted:spawner_block",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "minecraft:timing": {
+                "minecraft:ageable": {
+                    "duration": 1.65,
+                    "grow_up": {
+                        "event": "minecraft:event_despawning",
+                        "target": "self"
+                    }
+                }
+            },
+            "minecraft:despawning": {
+                "minecraft:type_family": {
+                    "family": [
+                        "despawning"
+                    ]
+                },
+                "minecraft:despawn": {
+                    "filters": {
+                        "all_of": [
+                            {
+                                "test": "is_family",
+                                "subject": "self",
+                                "value": "despawning"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "ghost",
+                    "dragon_portal"
+                ]
+            },
+            "minecraft:spawn_entity": {
+                "entities": [
+                  {
+                  "min_wait_time": 0,
+                  "max_wait_time": 0,
+                  "spawn_entity": "g2crafted:mini_dragon",
+                  "spawn_event": "minecraft:entity_spawned",
+                  "single_use": true,
+                  "num_to_spawn": 1,
+                  "should_leash": false
+                  }
+               ]
+            },
+            "minecraft:health": {
+                "value": 10,
+                "max": 10
+            },
+            "minecraft:collision_box": {
+                "width": 0.0,
+                "height": 0.0
+            },
+            "minecraft:physics": {
+                "has_gravity": false,
+                "has_collision": false
+            },
+            "minecraft:movement": {
+                "value": 0.0
+            },
+            "minecraft:behavior.float": {
+                "priority": 0
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:ageable": {
+                "duration": 5.0,
+                "grow_up": {
+                    "event": "minecraft:event_despawning",
+                    "target": "self"
+                }
+            }
+        },
+        "events": {
+            "minecraft:entity_transformed": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:timing"
+                    ]
+                }
+            },
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:timing"
+                    ]
+                }
+            },
+            "summon_boom": {
+                "add": {
+                    "component_groups": [
+                        "boom_summoner"
+                    ]
+                }
+            },
+            "minecraft:event_despawning": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:despawning"
+                    ]
+                }
+            }
+        }
+    }
+}

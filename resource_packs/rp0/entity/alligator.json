@@ -1,0 +1,46 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "g2crafted:mystic_alligator",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"default": "textures/entity/alligator"
+			},
+			"geometry": {
+				"default": "geometry.alligator"
+			},
+			"scripts": {
+				"animate": [
+					{ "move": "query.is_on_ground" },
+					{ "alligator.general": "!query.is_in_water" },
+					{ "alligator_water.general": "query.is_in_water && query.modified_move_speed < 0.15" },
+					{ "look_at_target": "!query.is_in_water" },
+					{ "alligator_look_at_target": "query.is_in_water" },
+					"attack",
+					{ "swimming": "query.is_in_water && query.modified_move_speed > 0.15" }
+				]
+			},
+			"animations": {
+				"walking": "animation.alligator.walk",
+				"alligator.general": "animation.alligator.general",
+				"alligator_water.general": "animation.alligator_water.general",
+				"look_at_target": "animation.common.look_at_target",
+				"alligator_look_at_target": "animation.aliigator.look_at_target",
+				"attacking": "animation.alligator.attack",
+				"swimming": "animation.alligator.swim",
+				"attack": "controller.animation.alligator.attack",
+				"move": "controller.animation.alligator.walk"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"base_color": "#6a6c2e",
+				"overlay_color": "#cdda8e"
+			}
+		}
+	}
+}

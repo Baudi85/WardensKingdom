@@ -1,0 +1,50 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "threed:threeditem",
+      "materials": {
+        "default": "skeleton",
+        "glowing": "entity_beam_additive",
+        "bright": "enderman",
+        "legs": "entity_beam_additive"
+      },
+      "textures": {
+        "sculk_core": "textures/entity/sculck_mobs/dragon_xp",
+        "dragon_spine": "textures/entity/dragon_spine",
+        "warden_heart": "textures/entity/warden_heart",
+        "sculk_gem": "textures/entity/sculk_gem",
+        "sculk_tendral": "textures/entity/tendral"
+      },
+      "geometry": {
+        "sculk_core": "geometry.core_item",
+        "dragon_spine": "geometry.dragon_spine",
+        "warden_heart": "geometry.warden_heart",
+        "sculk_gem": "geometry.sculker_gem",
+        "sculk_tendral": "geometry.sculk_tendral"
+      },
+      "animations": {
+        "general": "animation.sculk_core_item.general",
+        "spine": "animation.dragon_spine.general",
+        "heart": "animation.warden_heart.general",
+        "gem": "animation.sculker_gem.general",
+        "tendral": "animation.sculk_tendral.general",
+        "rotate": "animation.item.rotate"
+      },
+      "scripts": {
+        "scale": "0.35",
+        "animate": [
+          "general",
+          "spine",
+          "heart",
+          "gem",
+          "tendral",
+          "rotate"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.3d_item"
+      ]
+    }
+  }
+}

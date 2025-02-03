@@ -1,0 +1,32 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.deer.baby_transform": {
+			"loop": true,
+			"bones": {
+				"horn1": {
+					"scale": [0, 0, 0]
+				},
+				"antler6": {
+					"scale": [0, 0, 0]
+				}
+			}
+		},
+		"animation.deer.setup": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": ["-this", 0, 0]
+				}
+			}
+		},
+		"animation.deer.setup.v1.0": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": ["90 - this", 0, 0]
+				}
+			}
+		}
+	}
+}

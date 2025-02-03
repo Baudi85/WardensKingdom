@@ -1,0 +1,124 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.sculk_projectile",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "head",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "rotate_bod",
+					"parent": "head",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "rotate_bod",
+					"pivot": [0, 0, 0],
+					"rotation": [0, 180, 0],
+					"cubes": [
+						{"origin": [-3, -3, -1], "size": [6, 6, 4], "uv": [0, 14]},
+						{"origin": [-1.5, -1.5, -2], "size": [3, 3, 1], "uv": [0, 39]},
+						{"origin": [-3, -3, -3], "size": [1, 6, 2], "uv": [6, 31]},
+						{"origin": [2, -3, -3], "size": [1, 6, 2], "uv": [0, 31]},
+						{"origin": [-2, -3, -3], "size": [4, 1, 2], "uv": [26, 29]},
+						{"origin": [-2, 2, -3], "size": [4, 1, 2], "uv": [28, 26]}
+					]
+				},
+				{
+					"name": "bone",
+					"parent": "body",
+					"pivot": [0, -7, 0]
+				},
+				{
+					"name": "echo_trail",
+					"parent": "body",
+					"pivot": [0, 0, 1]
+				},
+				{
+					"name": "main_trail",
+					"parent": "echo_trail",
+					"pivot": [0, 0, 1],
+					"cubes": [
+						{"origin": [-2.5, -2.5, 1.5], "size": [5, 5, 1], "uv": [28, 20]}
+					]
+				},
+				{
+					"name": "echo_1",
+					"parent": "echo_trail",
+					"pivot": [0, 0, 1],
+					"cubes": [
+						{"origin": [-2.5, -2.5, 1.5], "size": [5, 5, 1], "uv": [21, 0]}
+					]
+				},
+				{
+					"name": "echo_2",
+					"parent": "echo_trail",
+					"pivot": [0, 0, 1],
+					"cubes": [
+						{"origin": [-2.5, -2.5, 1.5], "size": [5, 5, 1], "uv": [21, 0]}
+					]
+				},
+				{
+					"name": "tail_flipper",
+					"parent": "body",
+					"pivot": [0, 0, 3]
+				},
+				{
+					"name": "tail",
+					"parent": "tail_flipper",
+					"pivot": [0, 0, 3],
+					"cubes": [
+						{"origin": [0, -3, 3], "size": [0, 6, 6], "uv": [20, 8]}
+					]
+				},
+				{
+					"name": "spectral_tail",
+					"parent": "tail",
+					"pivot": [0, -7, 0],
+					"cubes": [
+						{"origin": [-0.1, -3.5, 3], "size": [0, 7, 7], "uv": [14, 17]},
+						{"origin": [0.1, -3.5, 3], "size": [0, 7, 7], "uv": [14, 17], "mirror": true}
+					]
+				},
+				{
+					"name": "ribcage_1",
+					"parent": "body",
+					"pivot": [3.1, 0, -0.1],
+					"rotation": [0, -5, 0],
+					"cubes": [
+						{"origin": [3.1, -2, -3.1], "size": [0, 4, 3], "uv": [20, 17]},
+						{"origin": [0.1, -2, -3.1], "size": [3, 4, 0], "uv": [18, 31]}
+					]
+				},
+				{
+					"name": "ribcage_2",
+					"parent": "body",
+					"pivot": [-3.1, 0, -0.1],
+					"rotation": [0, 5, 0],
+					"cubes": [
+						{"origin": [-3.1, -2, -3.1], "size": [0, 4, 3], "uv": [20, 17], "mirror": true},
+						{"origin": [-3.1, -2, -3.1], "size": [3, 4, 0], "uv": [18, 31], "mirror": true}
+					]
+				},
+				{
+					"name": "spectral_cover",
+					"parent": "body",
+					"pivot": [0, -7, 0],
+					"cubes": [
+						{"origin": [-3.5, -3.5, -3.5], "size": [7, 7, 7], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "g2crafted:dragon_portal",
+      "materials": {
+        "default": "entity_beam_additive"
+      },
+      "textures": {
+        "default": "textures/entity/sculck_mobs/energey_beams"
+      },
+      "geometry": {
+        "default": "geometry.energey_beams"
+			},
+			"scripts": {
+			  "animate": [
+				  "face_player",
+          "beams"
+				]
+      },
+      "animations": {
+        "face_player": "animation.actor.billboard",
+        "beams": "animation.energey_beams.rotate"
+      },
+      "particle_effects": {
+        "sonic_boom": "minecraft:sonic_explosion",
+        "trail": "minecraft:shriek_particle"
+      },
+      "sound_effects": {
+        "blast": "mob.sculkdragon.sonic_blast"
+      },
+      "render_controllers": [ "controller.render.basic" ],
+      "spawn_egg": {
+        "overlay_color": "#2be5e9",
+        "base_color": "#e4fbfc"
+      }
+    }
+  }
+}

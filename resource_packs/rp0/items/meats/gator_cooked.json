@@ -1,0 +1,14 @@
+{
+ "format_version": "1.10",
+ "minecraft:item": {
+  "description": {
+   "identifier": "g2crafted:gator_cooked",
+   "category": "Nature"
+  },
+  "components": {
+    "minecraft:icon": "gator_cooked",
+    "minecraft:use_animation": "eat",
+    "minecraft:render_offsets": "apple"
+    }
+  }
+}

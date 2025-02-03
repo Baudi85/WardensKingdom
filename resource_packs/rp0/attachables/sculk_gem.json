@@ -1,0 +1,37 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "g2crafted:sculk_gem",
+      "materials": {
+        "default": "skeleton",
+        "glowing": "entity_beam_additive",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "default": "textures/entity/sculk_gem",
+        "enchanted": "textures/attachables/enchanted_glint"
+      },
+      "geometry": {
+        "default": "geometry.held_sculker_gem"
+      },
+      "animations": {
+        "wield_first_person": "animation.sculk_gem_first_person.hold",
+        "wield": "animation.sculk_gem.hold"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "wield": "!context.is_first_person"
+          },
+          {
+            "wield_first_person": "context.is_first_person"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.gem_default"
+      ]
+    }
+  }
+}

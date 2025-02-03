@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "g2crafted:spawner_block",
+      "materials": { "default": "skeleton" },
+      "textures": {
+        "default": "textures/entity/spawner_block"
+      },
+      "geometry": {
+        "default": "geometry.spawner_block"
+      },
+      "animations": {
+        "setup": "animation.cow.setup"
+      },
+      "scripts": {
+        "animate": [
+          "setup"
+        ]
+      },
+      "render_controllers": [ "controller.render.skeleton" ],
+      "spawn_egg": {
+        "overlay_color": "#bc9968",
+        "base_color": "#d1b47e"
+      }
+    }
+  }
+}

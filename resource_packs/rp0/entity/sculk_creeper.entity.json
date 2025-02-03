@@ -1,0 +1,66 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "g2crafted:sculk_creeper",
+      "materials": { 
+        "default": "enderman",
+        "spit_": "entity_beam_additive"
+    },
+    "textures": {
+      "default": "textures/entity/sculck_mobs/sculk_creeper"
+    },
+    "geometry": {
+      "default": "geometry.sculk_creeper"
+    },
+      "spawn_egg": {
+        "overlay_color": "#d1d6b6",
+        "base_color": "#05625d"
+		},
+		  "scripts": {
+			  "animate": [
+        "general",
+        { "attack": "query.facing_target_to_range_attack" },
+        { "look_at_target": "!query.is_emerging" },
+        { "summon": "query.is_emerging" },
+        { "move": "query.is_on_ground && !query.is_emerging" },
+        { "sitting" : "query.is_sitting" },
+        { "turn": "query.is_on_ground && !query.is_emerging" },
+        { "turn_tow": "query.is_on_ground && !query.is_emerging" },
+        "hurt",
+        { "jump" : "!query.is_on_ground && !query.is_emerging" },
+        { "rings_close" : "!query.is_moving" }
+			]
+		},
+    "animations": {
+      "general": "controller.animation.sculk_creeper.general",
+      "sculck_general": "animation.sculk_creeper.general",
+      "attack": "animation.sculk_creeper.spit",
+      "look_at_target": "animation.sculker.look_at_target",
+      "summon": "controller.animation.sculk_creeper.digout",
+      "sculck_summon": "animation.sculk_creeper.digout",
+      "move": "controller.animation.sculk_creeper.walk",
+      "walking": "animation.sculk_creeper.walk",
+      "sprint": "animation.sculk_creeper.stomp",
+      "sitting": "animation.sculk_creeper.sit",
+      "hurt": "controller.animation.sculk_creeper.hurt",
+      "sculck_hurt": "animation.sculk_creeper.hurt",
+      "turn": "controller.animation.sculk_creeper.turn",
+      "turn_tow": "controller.animation.sculk_creeper.turn_two",
+      "turning": "animation.sculk_creeper.turn",
+      "jump": "animation.sculk_creeper.jump",
+      "rings_close": "animation.sculk_creeper.rings_close"
+    },
+    "particle_effects": {
+      "dig": "g2crafted:sculk_zombie_dig"
+    },
+    "sound_effects": {
+      "sculk_emerge": "mob.sculck_zombie.spawn",
+      "say2": "mob.sculk_creeper.digsay",
+      "screem": "mob.sculk_creeper.attack",
+      "heartbeat": "mob.sculk_creeper.heartbeat"
+    },
+    "render_controllers": [ "controller.render.sculk_creeper" ]
+    }
+  }
+}

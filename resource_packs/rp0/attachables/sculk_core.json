@@ -1,0 +1,36 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "g2crafted:sculk_core",
+      "materials": {
+        "default": "entity_beam_additive",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "default": "textures/entity/sculck_mobs/dragon_xp",
+        "enchanted": "textures/attachables/enchanted_glint"
+      },
+      "geometry": {
+        "default": "geometry.held_sculker_core"
+      },
+      "animations": {
+        "wield_first_person": "animation.sculk_core_first_person.hold",
+        "wield": "animation.sculk_core.hold"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "wield": "!context.is_first_person"
+          },
+          {
+            "wield_first_person": "context.is_first_person"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.item_default"
+      ]
+    }
+  }
+}

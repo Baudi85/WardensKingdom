@@ -1,0 +1,28 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "g2crafted:jelly",
+      "materials": { "default": "glass" },
+      "textures": {
+        "default": "textures/entity/jelly/jelly"
+      },
+      "geometry": {
+        "default": "geometry.jelly.small.v1.8",
+        "mid": "geometry.jelly.mid.v1.8",
+        "large": "geometry.jelly.large.v1.8"
+      },
+      "spawn_egg": {
+        "overlay_color": "#ff0066",
+        "base_color": "#ffcccc"
+      },
+      "animations": {
+        "move": "animation.ghast.move"
+      },
+      "animation_controllers": [
+        { "move": "controller.animation.ghast.move" }
+      ],
+      "render_controllers": [ "controller.render.jelly" ]
+    }
+  }
+}

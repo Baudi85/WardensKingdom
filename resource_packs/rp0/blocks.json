@@ -1,0 +1,94 @@
+{ 
+
+   "format_version": "1.19.20",
+
+  "g2crafted:sculk_leaf": {
+    "sound" : "sculk_vein"
+  },
+  "g2crafted:sculk_glass": {
+    "sound" : "sculk_shrieker"
+  },
+  "g2crafted:sculk_plant": {
+    "sound" : "sculk_vein"
+  },
+  "g2crafted:sculk_plant": {
+    "sound" : "grass"
+  },
+  "g2crafted:snowy_grass": {
+    "sound" : "grass"
+  },
+  "g2crafted:false_snow": {
+    "sound" : "powder_snow"
+  },
+  "nether_brick_fence": {
+    "textures": "red_nether_brick",
+    "sound": "stone"
+  },
+  "stonecutter": {
+    "textures": {
+      "up": "stripped_spruce_log_side",
+      "down": "stonecutter_bottom",
+      "north": "stonecutter_side",
+      "south": "stonecutter_side",
+      "west": "stonecutter_other_side",
+      "east": "stonecutter_other_side"
+    },
+    "sound": "stone"
+  },
+  "dispenser": {
+    "textures": {
+      "up": "dispenser_side",
+      "down": "dispenser_side",
+      "north": "dispenser_side",
+      "south": "dispenser_side",
+      "west": "dispenser_side",
+      "east": "dispenser_side"
+    }
+  },
+  "furnace": {
+    "textures": {
+      "up": "furnace_top",
+      "down": "furnace_top",
+      "north": "furnace_top",
+      "south": "furnace_front_off",
+      "west": "furnace_top",
+      "east": "furnace_top"
+    },
+    "sound": "stone"
+  },
+  "cactus": {
+    "textures": {
+      "blockshape" : "chorus_flower",
+      "up": "cactus_top",
+      "down": "cactus_bottom",
+      "side": "cactus_side"
+    },
+    "sound": "cloth"
+  },
+  "chorus_plant": {
+  "textures": {
+      "up": "cactus_side",
+      "down": "cactus_side",
+      "side": "cactus_side"
+    },
+    "sound": "cloth"
+  },
+  "chorus_flower": {
+   "textures": {
+      "up": "cactus_side",
+      "down": "cactus_side",
+      "side": "cactus_side"
+    },
+    "sound": "cloth"
+  },
+  "dropper": {
+    "textures": {
+      "up": "dropper_side",
+      "down": "dropper_side",
+      "north": "dropper_side",
+      "south": "dropper_side",
+      "west": "dropper_side",
+      "east": "dropper_side"
+    }
+  }
+}

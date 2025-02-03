@@ -1,0 +1,19 @@
+﻿{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.threed_item": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "on_entry": [
+            "/tag @s[name=\"Core\"] add sculk_core",
+            "/tag @s[name=\"Dragon Spine\"] add dragon_spine",
+            "/tag @s[name=\"Warden Heart\"] add warden_heart",
+            "/tag @s[name=\"Sculk Gem\"] add sculk_gem",
+            "/tag @s[name=\"Sculk Tendral\"] add sculk_tendral"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "g2crafted:sculk_creeper_cracked",
+      "materials": { 
+        "default": "enderman",
+        "light_beams": "entity_beam_additive"
+    },
+    "textures": {
+      "default": "textures/entity/sculck_mobs/sculk_creeper_cracked"
+    },
+    "geometry": {
+      "default": "geometry.sculk_creeper_cracked"
+    },
+      "spawn_egg": {
+        "overlay_color": "#d1d6b6",
+        "base_color": "#05625d"
+		},
+    "scripts": {
+      "animate": [
+        "face_player",
+        "open"
+      ]
+    },
+    "animations": {
+      "face_player": "animation.actor.billboard",
+      "open": "animation.sculk_creeper_cracked.open"
+    },
+    "sound_effects": {
+      "levitation_sound": "mob.sculk_creeper.levitation_sound",
+      "light_beam": "mob.sculk_creeper.light_Beam",
+      "crack1": "mob.sculk_creeper.crack",
+      "crack2": "mob.sculk_creeper.crack",
+      "crack3": "mob.sculk_creeper.crack",
+      "before_expolsion": "mob.sculk_creeper.before_expolsion",
+      "explosion": "mob.sculk_creeper.explosion",
+      "sound_of_echo": "mob.sculk_creeper.sound_of_echo"
+    },
+    "render_controllers": [ "controller.render.sculk_creeper_cracked" ]
+    }
+  }
+}

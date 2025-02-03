@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "animation_controllers": {
+    "controller.animation.firefly.base_pose": {
+      "states": {
+        "default": {
+          "animations": [ 
+            { "firefly_base_pose": [] } 
+          ],
+          "particle_effects": [
+            {
+              "effect": "firefly_dust",
+              "locator": "body"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

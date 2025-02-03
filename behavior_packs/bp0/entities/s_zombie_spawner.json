@@ -1,0 +1,168 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "g2crafted:s_zombie_spawner",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "minecraft:timing": {
+                "minecraft:ageable": {
+                    "duration": 0.1,
+                    "grow_up": {
+                        "event": "minecraft:event_despawning",
+                        "target": "self"
+                    }
+                }
+            },
+            "minecraft:zombie_one": {
+                "minecraft:spawn_entity": {
+                    "entities": [
+                      {
+                        "min_wait_time": 0,
+                        "max_wait_time": 0,
+                        "spawn_entity": "g2crafted:sculck_zombie",
+                        "spawn_event": "emerge_setter",
+                        "single_use": true,
+                        "num_to_spawn": 1,
+                        "should_leash": false
+                        }
+                    ]
+                }
+            },
+            "minecraft:zombie_two": {
+                "minecraft:spawn_entity": {
+                    "entities": [
+                      {
+                        "min_wait_time": 5,
+                        "max_wait_time": 5,
+                        "spawn_entity": "g2crafted:sculck_zombie",
+                        "spawn_event": "emerge_setter",
+                        "single_use": true,
+                        "num_to_spawn": 1,
+                        "should_leash": false
+                        }
+                    ]
+                }
+            },
+            "minecraft:despawning": {
+                "minecraft:type_family": {
+                    "family": [
+                        "despawning"
+                    ]
+                },
+                "minecraft:despawn": {
+                    "filters": {
+                        "all_of": [
+                            {
+                                "test": "is_family",
+                                "subject": "self",
+                                "value": "despawning"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "ghost"
+                ]
+            },
+            "minecraft:health": {
+                "value": 10,
+                "max": 10
+            },
+            "minecraft:collision_box": {
+                "width": 0.0,
+                "height": 0.0
+            },
+            "minecraft:fire_immune": true,
+            "minecraft:physics": {
+                "has_gravity": false,
+                "has_collision": false
+            },
+            "minecraft:knockback_resistance": {
+                "value": 100,
+                "max": 100
+            },
+            "minecraft:ageable": {
+                "duration": 3.5,
+                "grow_up": {
+                    "event": "minecraft:event_despawning",
+                    "target": "self"
+                }
+            }
+        },
+        "events": {
+            "minecraft:entity_transformed": {
+			  "randomize": [
+				{
+				  "weight": 1,
+				  "randomize": [
+					{
+					  "weight": 50,
+					  "filters": {},
+					  "add": {
+						"component_groups": [
+						  "minecraft:zombie_one",
+                          "minecraft:timing"
+						]
+					  }
+					},
+					{
+					  "weight": 50,
+					  "filters": {},
+					  "add": {
+						"component_groups": [
+						  "minecraft:zombie_two",
+                          "minecraft:timing"
+						]
+					  }
+					}
+				  ]
+				}
+			  ]
+			},
+            "minecraft:entity_spawned": {
+			  "randomize": [
+				{
+				  "weight": 1,
+				  "randomize": [
+					{
+					  "weight": 50,
+					  "filters": {},
+					  "add": {
+						"component_groups": [
+						  "minecraft:zombie_one",
+                          "minecraft:timing"
+						]
+					  }
+					},
+					{
+					  "weight": 50,
+					  "filters": {},
+					  "add": {
+						"component_groups": [
+						  "minecraft:zombie_two",
+                          "minecraft:timing"
+						]
+					  }
+					}
+				  ]
+				}
+			  ]
+			},
+            "minecraft:event_despawning": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:despawning"
+                    ]
+                }
+            }
+        }
+    }
+}

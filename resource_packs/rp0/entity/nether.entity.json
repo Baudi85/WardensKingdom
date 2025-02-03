@@ -1,0 +1,49 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "g2crafted:nether",
+      "materials": {
+        "default": "villager"
+      },
+      "textures": {
+        "farmer": "textures/entity/nether/farmer",
+        "librarian": "textures/entity/nether/librarian",
+        "priest": "textures/entity/nether/priest",
+        "smith": "textures/entity/nether/smith",
+        "butcher": "textures/entity/nether/butcher"
+      },
+      "geometry": {
+        "default": "geometry.nether"
+      },
+      "scripts": {
+        "scale": "0.9375",
+        "pre_animation": [
+          "variable.num_professions = 15;",
+          "variable.num_tiers = 3;",
+          "variable.profession_index = (query.variant < variable.num_professions ? query.variant : 0);",
+          "variable.level_index = query.trade_tier;"
+        ]
+      },
+      "animations": {
+        "general": "animation.nether.general",
+        "look_at_target": "animation.common.look_at_target",
+        "move": "animation.nether.move",
+        "raise_arms": "animation.nether.raise_arms",
+        "baby_transform": "animation.nether.baby_transform",
+        "get_in_bed": "animation.nether.get_in_bed"
+      },
+      "animation_controllers": [
+        { "general": "controller.animation.nether.general" },
+        { "move": "controller.animation.nether.move" },
+        { "raise_arms": "controller.animation.nether.raise_arms" },
+        { "baby": "controller.animation.nether.baby" }
+      ],
+      "render_controllers": [ "controller.render.nether" ],
+      "spawn_egg": {
+        "base_color": "#FF6D52",
+        "overlay_color": "#5A0000"
+      }
+    }
+  }
+}

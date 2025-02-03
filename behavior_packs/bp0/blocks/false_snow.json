@@ -1,0 +1,37 @@
+{
+	"format_version": "1.19.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "g2crafted:false_snow",
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:loot": "loot_tables/blocks/false_snow.json",
+			"minecraft:collision_box": true,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.4
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 0
+			},
+			"minecraft:flammable": {
+				"destroy_chance_modifier": 20,
+				"catch_chance_modifier": 5
+			},
+			"minecraft:geometry": "geometry.false_snow",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "varied_snow",
+					"ambient_occlusion": true,
+                    "face_dimming": true,
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:light_emission": 0,
+			"minecraft:light_dampening": 0,
+			"minecraft:map_color": "#1acab0"
+		}
+	}
+}

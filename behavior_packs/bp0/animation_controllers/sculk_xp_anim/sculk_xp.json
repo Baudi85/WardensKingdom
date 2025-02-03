@@ -1,0 +1,30 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.sculk_xp.setup": {
+		"states": {
+		    "default": {
+			    "transitions": [
+			  {
+				"command_example": "query.skin_id == 2"
+			  }
+			]
+		},
+		"command_example": {
+			"transitions": [
+		    {
+			  "default": "query.skin_id != 2"
+		    }
+		  ],
+			"on_entry": [
+            "/execute @s[r=1] ~ ~ ~ execute @p[r=1] ~ ~ ~ say hello",
+			"/execute @s[r=1] ~ ~ ~ execute @p[r=1] ~ ~ ~ playsound mob.sculkdragon.levelup @p",
+			"/execute @s[r=1] ~ ~ ~ execute @p[r=1] ~ ~ ~ xp 1000000",
+			"/execute @s[r=1] ~ ~ ~ execute @p[r=1] ~ ~ ~ event entity @e[type=g2crafted:sculk_xp,r=1] event_despawning",
+            "@s reset_command"
+          ]
+        }
+      }
+    }
+  }
+}

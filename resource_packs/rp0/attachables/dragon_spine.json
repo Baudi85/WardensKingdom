@@ -1,0 +1,36 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "g2crafted:dragon_spine",
+      "materials": {
+        "default": "skeleton",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "default": "textures/entity/dragon_spine",
+        "enchanted": "textures/attachables/enchanted_glint"
+      },
+      "geometry": {
+        "default": "geometry.held_dragon_spine"
+      },
+      "animations": {
+        "wield_first_person": "animation.dragon_spine_first_person.hold",
+        "wield": "animation.dragon_spine.hold"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "wield": "!context.is_first_person"
+          },
+          {
+            "wield_first_person": "context.is_first_person"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.item_default"
+      ]
+    }
+  }
+}

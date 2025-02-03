@@ -1,0 +1,164 @@
+{
+  "format_version": "1.12.0",
+    "minecraft:entity": {
+        "description": {
+        "identifier": "g2crafted:sculk_projectile_teal",
+        "runtime_identifier": "minecraft:shulker_bullet",
+        "is_spawnable": false,
+        "is_summonable": true,
+        "is_experimental": false
+        },
+        "component_groups": {
+          "minecraft:exploding": {
+            "minecraft:explode": {
+             "breaks_blocks": true,
+             "fuse_length": 0,
+             "fuse_lit": true,
+             "power": 1,
+             "causes_fire": false,
+             "fire_affected_by_griefing": true,
+             "destroy_affected_by_griefing": true
+            }
+          },
+          "effecting_despawn": {
+            "minecraft:mob_effect": {
+              "effect_range": 6,
+              "effect_time": 9,
+              "mob_effect": "slow_falling",
+              "cooldown_time": 0,
+              "entity_filter": {
+                "all_of": [
+                  { "test": "is_family", "subject": "other", "value": "player" },
+                  { "operator": "not", "test": "has_ability", "subject" : "other", "value" : "invulnerable" }
+                ]
+              }
+            },
+            "minecraft:timer":{
+             "looping": false,
+             "randomInterval":false,
+             "time": [0.1, 0.1],
+             "time_down_event": {
+               "event":"set_despawn"
+              }
+            }
+          },
+          "minecraft:despawning": {
+            "minecraft:type_family": {
+                "family": [
+                    "despawning"
+                ]
+            },
+            "minecraft:despawn": {
+                "filters": {
+                    "all_of": [
+                        {
+                            "test": "is_family",
+                            "subject": "self",
+                            "value": "despawning"
+                          }
+                      ]
+                  }
+              }
+          },
+          "no_command_skin": {
+            "minecraft:skin_id": {
+                "value": 0
+              }
+          },
+          "command_skin": {
+            "minecraft:skin_id": {
+                "value": 2
+            }
+          }
+        },
+        "components": {
+            "minecraft:behavior.look_at_player": {
+                "look_distance": 6,
+                "priority": 2,
+                "probability": 1
+            },
+            "minecraft:collision_box": {
+                "height": 0.625,
+                "width": 0.625
+            },
+            "minecraft:projectile": {
+                "on_hit": {
+                  "impact_damage": {
+                    "damage": 4,
+                    "knockback": true,
+                    "should_bounce": true
+                  },
+                  "definition_event": {
+                    "affect_projectile": true,
+                    "event_trigger": {
+                      "event": "effect_two",
+                      "target": "self"
+                      }
+                  },
+                  "mob_effect": {
+                    "effect": "levitation",
+                    "durationeasy": 105,
+                    "durationnormal": 105,
+                    "durationhard": 105,
+                    "amplifier": 1
+                    }
+                },
+                "hit_sound": "bullet.hit",
+                "destroy_on_hurt": true,
+                "crit_particle_on_hurt": true,
+                "power": 1.6,
+                "gravity": 0.00,
+                "inertia": 1,
+                "liquid_inertia": 1,
+                "uncertainty_multiplier": 4,
+                "anchor": 1,
+                "offset": [ 0, -0.1, 0 ],
+                "homing": true
+              },
+              "minecraft:conditional_bandwidth_optimization": {
+                "default_values": {
+                  "max_optimized_distance": 80.0,
+                  "max_dropped_ticks": 7,
+                  "use_motion_prediction_hints": true
+                }
+            }
+        },
+        "events": {
+        "start_command": {
+          "add": {
+            "component_groups": [
+              "command_skin"
+            ]
+          }
+        },
+        "effect_two": {
+          "add": {
+            "component_groups": [
+              "effecting_despawn"
+            ]
+          }
+        },
+        "set_despawn": {
+          "add": {
+            "component_groups": [
+              "minecraft:despawning"
+            ]
+          }
+        },
+        "minecraft:explode": {
+          "add": {
+           "component_groups": [
+             "minecraft:exploding"
+            ]
+          }
+        },
+        "stop_command": {
+          "add": {
+            "component_groups": [
+              "no_command_skin"
+            ]
+          }
+        }
+      }
+    }
+  }

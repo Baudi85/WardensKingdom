@@ -1,0 +1,14 @@
+{
+ "format_version": "1.10",
+ "minecraft:item": {
+  "description": {
+   "identifier": "g2crafted:buffalo_beef_raw",
+   "category": "Nature"
+  },
+  "components": {
+    "minecraft:icon": "buffalo_beef_raw",
+    "minecraft:use_animation": "eat",
+    "minecraft:render_offsets": "apple"
+    }
+  }
+}

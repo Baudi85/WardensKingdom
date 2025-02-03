@@ -1,0 +1,124 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "g2crafted:death_dragon",
+            "runtime_identifier": "minecraft:ender_pearl",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "scripts": {
+              "animate": [
+                "setup"
+              ]
+            },
+            "animations": {
+              "setup": "controller.animation.spawn_xp.setup"
+              }
+        },
+        "component_groups": {
+            "minecraft:timing": {
+                "minecraft:spawn_entity": {
+                  "entities": [
+                    {
+                    "min_wait_time": 2,
+                    "max_wait_time": 2,
+                    "spawn_entity": "g2crafted:sonic_roar",
+                    "spawn_event": "start_time",
+                    "single_use": true,
+                    "num_to_spawn": 1,
+                    "should_leash": false
+                    }
+                  ]
+                },
+                "minecraft:ageable": {
+                    "duration": 7.05,
+                    "grow_up": {
+                        "event": "minecraft:event_despawning",
+                        "target": "self"
+                    }
+                }
+            },
+            "minecraft:despawning": {
+                "minecraft:skin_id": {
+                    "value": 2
+                },
+                "minecraft:type_family": {
+                    "family": [
+                        "despawning"
+                    ]
+                },
+                "minecraft:despawn": {
+                    "filters": {
+                        "all_of": [
+                            {
+                                "test": "is_family",
+                                "subject": "self",
+                                "value": "despawning"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "death_dragon"
+                ]
+            },
+            "minecraft:health": {
+                "value": 10,
+                "max": 10
+            },
+            "minecraft:collision_box": {
+                "width": 0.0,
+                "height": 0.0
+            },
+            "minecraft:physics": {
+                "has_gravity": false,
+                "has_collision": true
+            },
+            "minecraft:movement": {
+                "value": 0.0
+            },
+            "minecraft:behavior.float": {
+                "priority": 0
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": true
+            }
+        },
+        "events": {
+            "minecraft:entity_transformed": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:timing"
+                    ]
+                }
+            },
+            "minecraft:start_roar": {
+                "add": {
+                  "component_groups": [
+                    "roaring"
+                  ]
+               }
+            },
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:timing"
+                    ]
+                }
+            },
+            "minecraft:event_despawning": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:despawning"
+                    ]
+                }
+            }
+        }
+    }
+}

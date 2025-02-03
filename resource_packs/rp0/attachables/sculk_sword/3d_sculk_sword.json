@@ -1,0 +1,53 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "g2crafted:sculk_blade",
+      "materials": {
+        "default": "enderman",
+        "enchanted": "armor_enchanted",
+        "spit_": "entity_beam_additive"
+      },
+      "textures": {
+        "default": "textures/entity/sculk_sword",
+        "enchanted": "textures/attachables/enchanted_glint"
+      },
+      "geometry": {
+        "default": "geometry.held_sculk_sword"
+      },
+      "sound_effects": {
+        "swipe": "mob.sculk_sword.swipe",
+        "charge": "mob.sculker.sword_charge",
+        "idle": "mob.sculk_sword.idle"
+      },
+      "animations": {
+        "wield_first_person": "animation.sword_first_person.hold",
+        "wield_third_person": "animation.sword.hold",
+        "throw_third_person": "animation.sword_third_person.throw",
+        "attack_first_person": "animation.sword_first_person.attack",
+        "throw_first_person": "animation.sword_first_person.throw",
+        "attack_third_person": "animation.sword_third_person.attack",
+        "root": "controller.animation.sculk_sword.root"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.attack_time = c.owning_entity->v.attack_time;",
+          "variable.attack_time_increased = (v.prev_attack_time ?? 0) < v.attack_time;",
+          "variable.prev_attack_time = v.attack_time;",
+          "variable.attack_time_change_timestamp = v.attack_time_increased ? q.life_time : (v.attack_time_change_timestamp??q.life_time);",
+          "variable.attack_timestamp = v.attack_time <= 0  ? -1 : ((v.attack_timestamp ?? -1) > 0 ? v.attack_timestamp : q.life_time);",
+          "variable.attack_duration = v.attack_timestamp == -1 ? 0.0 : q.life_time-v.attack_timestamp;",
+          "variable.attack_time_increase_speed = variable.attack_time_increased ? (v.attack_duration > 0 ? v.attack_time/v.attack_duration : 0.0) : (variable.attack_time_increase_speed??0);",
+          "variable.smoothing = (q.life_time - v.attack_time_change_timestamp)*v.attack_time_increase_speed;",
+          "variable.smoothed_attack_time = v.attack_time == 0.0 ? 0.0 : math.clamp(v.attack_time + v.smoothing, 0.0, 1.0);"
+        ],
+        "animate": [
+          "root"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.sculk_sword"
+      ]
+    }
+  }
+}

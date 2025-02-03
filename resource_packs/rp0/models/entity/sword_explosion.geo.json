@@ -1,0 +1,99 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.sword_explosion",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 10,
+				"visible_bounds_height": 11,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [0, -3, 0]
+				},
+				{
+					"name": "burst",
+					"parent": "body",
+					"pivot": [0, -3, 0],
+					"rotation": [0, -90, 0]
+				},
+				{
+					"name": "light_17",
+					"parent": "burst",
+					"pivot": [0, -3, 0],
+					"rotation": [0, 0, -45],
+					"cubes": [
+						{"origin": [-32, -3, -32], "size": [64, 0, 64], "pivot": [0, -3, 0], "rotation": [0, 0, -90], "uv": [-64, 0]},
+						{"origin": [-32, -3, -32], "size": [64, 0, 64], "uv": [-64, 0]}
+					]
+				},
+				{
+					"name": "light_16",
+					"parent": "burst",
+					"pivot": [0, -3, 0],
+					"rotation": [0, -45, 0],
+					"cubes": [
+						{"origin": [-32, -3, -32], "size": [64, 0, 64], "pivot": [0, -3, 0], "rotation": [0, 0, 90], "uv": [-64, 0]},
+						{"origin": [-32, -3, -32], "size": [64, 0, 64], "pivot": [0, -3, 0], "rotation": [-90, 0, 0], "uv": [-64, 0]}
+					]
+				},
+				{
+					"name": "wave_1",
+					"parent": "body",
+					"pivot": [0, -3, 0],
+					"rotation": [0, -90, 0]
+				},
+				{
+					"name": "light_18",
+					"parent": "wave_1",
+					"pivot": [0, -3, 0],
+					"rotation": [0, 0, 45],
+					"cubes": [
+						{"origin": [-32, -3, -32], "size": [64, 0, 64], "pivot": [0, -3, 0], "rotation": [0, 0, -90], "uv": [64, 0]},
+						{"origin": [-32, -3, -32], "size": [64, 0, 64], "uv": [64, 0]}
+					]
+				},
+				{
+					"name": "light_19",
+					"parent": "wave_1",
+					"pivot": [0, -3, 0],
+					"rotation": [0, -45, 0],
+					"cubes": [
+						{"origin": [-32, -3, -32], "size": [64, 0, 64], "pivot": [0, -3, 0], "rotation": [90, 0, 0], "uv": [64, 0]},
+						{"origin": [-32, -3, -32], "size": [64, 0, 64], "pivot": [0, -3, 0], "rotation": [0, 0, 90], "uv": [64, 0]}
+					]
+				},
+				{
+					"name": "wave_2",
+					"parent": "body",
+					"pivot": [0, -3, 0],
+					"rotation": [0, -90, 0]
+				},
+				{
+					"name": "light_20",
+					"parent": "wave_2",
+					"pivot": [0, -3, 0],
+					"rotation": [0, 0, 45],
+					"cubes": [
+						{"origin": [-64, -3, -64], "size": [128, 0, 128], "uv": [-128, 64]},
+						{"origin": [-64, -3, -64], "size": [128, 0, 128], "pivot": [0, -3, 0], "rotation": [0, 0, -90], "uv": [-128, 64]}
+					]
+				},
+				{
+					"name": "light_21",
+					"parent": "wave_2",
+					"pivot": [0, -3, 0],
+					"rotation": [0, -45, 0],
+					"cubes": [
+						{"origin": [-64, -3, -64], "size": [128, 0, 128], "pivot": [0, -3, 0], "rotation": [90, 0, 0], "uv": [-128, 64]},
+						{"origin": [-64, -3, -64], "size": [128, 0, 128], "pivot": [0, -3, 0], "rotation": [0, 0, -90], "uv": [-128, 64]}
+					]
+				}
+			]
+		}
+	]
+}

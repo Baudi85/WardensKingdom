@@ -1,0 +1,13 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "g2crafted:sculk_flesh",
+			"category": "Items"
+		},
+		"components": {
+			"minecraft:icon": "sculk_flesh",
+			"minecraft:render_offsets": "apple"
+		}
+	}
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "minecraft:chainmail_leggings",
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "default": "textures/entity/sculk_armor/sculk_leggings",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.sculk_leggings"
+      },
+      "scripts": {
+        "parent_setup": "variable.leg_layer_visible = 0.0;",
+        "animate": [
+          "general"
+        ]
+      },
+      "animations": {
+        "general": "animation.sculk_leggings.stand_general"
+      },
+      "render_controllers": [ "controller.render.armor" ]
+    }
+  }
+}

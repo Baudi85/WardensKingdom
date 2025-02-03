@@ -1,0 +1,16 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.sculk_dragon_death": {
+      "geometry": "geometry.default",
+      "materials": [
+        { "*": "Material.default" },
+        { "beam_*": "Material.echo" },
+        { "light_beam_*": "Material.echo" },
+        { "spinner*": "Material.echo" },
+        { "echo*": "Material.echo" }
+      ],
+      "textures": [ "texture.default" ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "g2crafted:gchicken",
+      "materials": {
+        "default": "skeleton",
+        "legs": "chicken_legs"
+      },
+      "textures": {
+        "default": "textures/entity/gchicken"
+      },
+      "geometry": {
+        "default": "geometry.G2chicken"
+      },
+      "animations": {
+        "move": "animation.chicken.move",
+        "general": "animation.chicken.general",
+        "look_at_target": "animation.common.look_at_target"
+      },
+      "scripts": {
+        "animate": [
+          "general",
+          { "move": "query.modified_move_speed" },
+          "look_at_target"
+        ]
+      },
+      "render_controllers": [ "controller.render.chicken" ],
+      "spawn_egg": {
+        "overlay_color": "#ffa62f",
+        "base_color": "#dedec9"
+      }
+    }
+  }
+}

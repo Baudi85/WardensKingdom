@@ -1,0 +1,35 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "g2crafted:sculk_xp",
+      "materials": {
+        "default": "entity_beam_additive"
+      },
+      "textures": {
+        "default": "textures/entity/sculck_mobs/dragon_xp"
+      },
+      "geometry": {
+        "default": "geometry.dragon_xp"
+			},
+			"scripts": {
+			  "animate": [
+          "flash",
+          { "fall": "!query.is_on_ground" }
+				]
+      },
+      "animations": {
+        "flash": "animation.sculk_xp.general",
+        "fall": "animation.dragon_xp.fall"
+      },
+      "sound_effects": {
+        "hover": "mob.sculkdragon.dragon_xp"
+      },
+      "render_controllers": [ "controller.render.basic" ],
+      "spawn_egg": {
+        "overlay_color": "#5cf9f7",
+        "base_color": "#0b212a"
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "format_version": "1.12.0",
+ "minecraft:entity": {
+  "description": {
+    "identifier": "g2crafted:sculk_ball",
+    "runtime_identifier": "minecraft:ender_pearl",
+    "is_spawnable": false,
+    "is_summonable": false,
+    "is_experimental": false
+  },
+
+  "component_groups": {
+  },
+
+  "components": {
+   "minecraft:collision_box": {
+    "width": 0.31,
+    "height": 0.31
+   },
+   "minecraft:projectile": {
+    "on_hit": {
+      "impact_damage": {
+        "damage": 0,
+        "knockback": true,
+        "destroy_on_hit": true
+      },
+      "remove_on_hit": {},
+      "spawn_chance": {
+        "first_spawn_percent_chance": 35,
+        "second_spawn_chance": 35,
+        "first_spawn_count": 1,
+        "second_spawn_count": 0,
+        "spawn_definition": "g2crafted:sculk_growth",
+        "spawn_baby": false
+      }
+    },
+    "mob_effect": {
+      "effect": "darkness",
+      "durationeasy": 200,
+      "durationnormal": 200,
+      "durationhard": 200,
+      "amplifier": 1
+    },
+    "power": 1.6,
+    "gravity": 0.00,
+    "inertia": 1,
+    "liquid_inertia": 1,
+    "uncertainty_base": 0,
+    "uncertainty_multiplier": 0,
+    "anchor": 1,
+    "offset": [ 0, -0.1, 0 ],
+    "reflect_on_hurt": true,
+    "catch_fire": false
+  },
+  "minecraft:mob_effect": {
+    "effect_range": 6,
+    "effect_time": 2,
+    "mob_effect": "darkness",
+    "cooldown_time": 0,
+    "entity_filter": {
+      "all_of": [
+        { "test": "is_family", "subject": "other", "value": "player" },
+        { "operator": "not", "test": "has_ability", "subject" : "other", "value" : "invulnerable" }
+      ]
+    }
+  },
+   "minecraft:physics": {
+   },
+   "minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+   },
+   "minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+      "max_optimized_distance": 80.0,
+      "max_dropped_ticks": 7,
+      "use_motion_prediction_hints": true
+    }
+  }
+  },
+  "events": {
+  }
+ }
+}

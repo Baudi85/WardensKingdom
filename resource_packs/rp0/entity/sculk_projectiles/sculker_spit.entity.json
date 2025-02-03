@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "g2crafted:sculker_spit",
+      "materials": { "default": "enderman" },
+      "textures": {
+        "default": "textures/entity/sculck_mobs/sculk_projectiles/sculker_spit"
+      },
+      "geometry": {
+        "default": "geometry.sculk_ball"
+      },
+      "animations": {
+        "face_player": "animation.actor.billboard"
+      },
+      "scripts": {
+        "animate": [
+          "face_player"
+        ]
+      },
+      "render_controllers": [ "controller.render.fireball" ]
+    }
+  }
+}

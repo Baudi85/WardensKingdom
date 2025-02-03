@@ -1,0 +1,33 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.sculk_growth.setup": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            { "break_chair": "query.is_alive" }
+          ]
+        },
+        "break_chair": {
+          "on_entry": [
+            "/execute @s ~ ~ ~ setblock ~ ~-1 ~ sculk_catalyst",
+            "/execute @s ~ ~ ~ summon g2crafted:death_sculk ^1 ^ ^",
+            "/execute @s ~ ~ ~ summon g2crafted:death_sculk ^-1 ^ ^",
+            "/execute @s ~ ~ ~ summon g2crafted:death_sculk ^ ^ ^1",
+            "/execute @s ~ ~ ~ summon g2crafted:death_sculk ^ ^ ^-1",
+            "/execute @s ~ ~ ~ summon g2crafted:s_zombie_spawner ^2 ^ ^",
+            "/execute @s ~ ~ ~ summon g2crafted:s_zombie_spawner ^-2 ^ ^",
+            "/execute @s ~ ~ ~ summon g2crafted:s_zombie_spawner ^ ^ ^2",
+            "/execute @s ~ ~ ~ summon g2crafted:s_zombie_spawner ^ ^ ^-2",
+            "/execute @s ~ ~ ~ effect @e[type=g2crafted:death_sculk, r=2] instant_damage 1000000 1 true",
+            "/execute @s ~ ~ ~ particle minecraft:sonic_explosion ^1 ^ ^",
+            "/execute @s ~ ~ ~ particle minecraft:sonic_explosion ^-1 ^ ^",
+            "/execute @s ~ ~ ~ particle minecraft:sonic_explosion ^ ^ ^1",
+            "/execute @s ~ ~ ~ particle minecraft:sonic_explosion ^ ^ ^-1"
+          ]
+        }
+      }
+    }
+  }
+}

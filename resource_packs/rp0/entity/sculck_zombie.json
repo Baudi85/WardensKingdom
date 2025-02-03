@@ -1,0 +1,50 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "g2crafted:sculck_zombie",
+      "materials": { "default": "enderman" },
+      "textures": {
+        "default": "textures/entity/sculck_mobs/sculck_zombie"
+      },
+      "geometry": {
+        "default": "geometry.sculck_zombie"
+			},
+			"scripts": {
+			  "animate": [
+				  "general",
+				  "melee_attack",
+          { "look_at_target": "!query.is_emerging" },
+          { "summon": "query.is_emerging" },
+          { "hurt": "query.hurt_time > 0" },
+          { "move": "!variable.has_target" },
+          { "sprint": "variable.has_target && query.is_moving" },
+          { "shreek": "query.is_sonic_boom" },
+          { "roar": "query.is_roaring" }
+				]
+			},
+      "animations": {
+        "hurt": "animation.sculck_zombie.damage",
+        "shreek": "animation.sculck_zombie.shreek",
+        "roar": "animation.sculck_zombie.shreek",
+        "summon": "animation.sculck_zombie.emerge",
+        "sculck_general": "animation.sculck_zombie.general",
+        "sprint": "animation.sculck_zombie.sprint",
+        "move": "controller.animation.sculck_zombie.move",
+        "walking": "animation.sculck_zombie.move",
+        "look_at_target": "animation.common.look_at_target",
+        "general": "controller.animation.sculck_zombie.general",
+        "sculck_attack": "animation.sculck_zombie.attack",
+        "melee_attack": "controller.animation.sculck_zombie.melee_attacking"
+      },
+      "particle_effects": {
+        "dig": "g2crafted:sculk_zombie_dig"
+      },
+      "render_controllers": [ "controller.render.sculk_zombie" ],
+      "spawn_egg": {
+        "overlay_color": "#062e37",
+        "base_color": "#71955b"
+      }
+    }
+  }
+}

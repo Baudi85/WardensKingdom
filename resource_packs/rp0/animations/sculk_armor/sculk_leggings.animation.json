@@ -1,0 +1,73 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.sculk_leggings.stand_general": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"scale": [1.1, 1, 1]
+				},
+				"bone": {
+					"scale": [1.1, 1, 1]
+				},
+				"bone2": {
+					"scale": [1.1, 1, 1]
+				},
+				"pad1": {
+					"position": [-0.4, 0, 0]
+				},
+				"pad2": {
+					"position": [0.2, 0, 0]
+				},
+				"spec_body": {
+					"position": [0, 1, 0],
+					"scale": [1.2, 1.1, 1.1]
+				},
+				"spec_leLeg": {
+					"position": [0.5, 0.5, 0],
+					"scale": 1.1
+				},
+				"spec_riLeg": {
+					"position": [-0.7, 0.5, 0],
+					"scale": 1.1
+				}
+			}
+		},
+		"animation.sculk_leggings.general": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"scale": [1.1, 1, 1]
+				},
+				"bone": {
+					"scale": [1.1, 1, 1]
+				},
+				"bone2": {
+					"scale": [1.1, 1, 1]
+				},
+				"pad1": {
+					"position": [-0.4, 0, 0]
+				},
+				"pad2": {
+					"position": [0.2, 0, 0]
+				},
+				"spec_body": {
+					"position": [0, 1, 0],
+					"scale": [1.2, 1.1, 1.1]
+				},
+				"spec_leLeg": {
+					"position": [0.5, 0.5, 0],
+					"scale": 1.1
+				},
+				"spec_riLeg": {
+					"position": [-0.7, 0.5, 0],
+					"scale": 1.1
+				}
+			}
+		},
+		"animation.sculk_leggings.move": {
+			"loop": true,
+			"animation_length": 0.52
+		}
+	}
+}

@@ -1,0 +1,97 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "threed:threeditem",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "sculk_core": {
+        "minecraft:mark_variant": {
+          "value": 0
+        }
+      },
+      "dragon_spine": {
+        "minecraft:mark_variant": {
+          "value": 1
+        }
+      },
+      "warden_heart": {
+        "minecraft:mark_variant": {
+          "value": 2
+        }
+      },
+      "sculk_gem": {
+        "minecraft:mark_variant": {
+          "value": 3
+        }
+      },
+      "sculk_tendral": {
+        "minecraft:mark_variant": {
+          "value": 4
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [ "3ditem" ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.0,
+        "height": 0.0
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "all",
+          "deals_damage": false
+        }
+      },
+      "minecraft:despawn": {
+        "filters": {
+          "test": "is_riding",
+          "operator": "==",
+          "value": false
+        }
+      }
+    },
+    "events": {
+      "sculk_core": {
+        "add": {
+          "component_groups": [
+            "sculk_core"
+          ]
+        }
+      },
+      "dragon_spine": {
+        "add": {
+          "component_groups": [
+            "dragon_spine"
+          ]
+        }
+      },
+      "warden_heart": {
+        "add": {
+          "component_groups": [
+            "warden_heart"
+          ]
+        }
+      },
+      "sculk_gem": {
+        "add": {
+          "component_groups": [
+            "sculk_gem"
+          ]
+        }
+      },
+      "sculk_tendral": {
+        "add": {
+          "component_groups": [
+            "sculk_tendral"
+          ]
+        }
+      }
+    }
+  }
+}

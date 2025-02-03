@@ -1,0 +1,283 @@
+{
+    "format_version": "1.17.0",
+    "animation_controllers": {
+        "controller.animation.items": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "watering_can": "query.is_item_name_any('slot.weapon.mainhand','ftb:watering_can')"
+                        },
+                        {
+                            "loot_box":  "query.is_item_name_any('slot.weapon.mainhand','ftb:loot_box')"
+                        },
+                        {
+                            "mesh":  "query.is_item_name_any('slot.weapon.mainhand','ftb:iron_mesh') || query.is_item_name_any('slot.weapon.mainhand','ftb:gold_mesh') || query.is_item_name_any('slot.weapon.mainhand','ftb:diamond_mesh') || query.is_item_name_any('slot.weapon.mainhand','ftb:cloth_mesh')"
+                        },
+                        {
+                            "diving": "query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_chestplate') || query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_boots') || query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_leggings') || query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_helmet')"
+                        },
+                        {
+                            "forge":  "query.is_item_name_any('slot.weapon.mainhand','ftb:forge_spawn_egg')"
+                        },
+                        {
+                            "stencil_table":  "query.is_item_name_any('slot.weapon.mainhand','ftb:stencil_table_spawn_egg')"
+                        },
+                        {
+                            "pattern_chest": "query.is_item_name_any('slot.weapon.mainhand','ftb:pattern_chest_spawn_egg')"
+                        },
+                        {
+                            "center_pedestal": "query.is_item_name_any('slot.weapon.mainhand','ftb:center_pedestal_spawn_egg')"
+                        },
+                        {
+                            "bonsai_pot":  "query.is_item_name_any('slot.weapon.mainhand','ftb:bonsai_pot_spawn_egg')"
+                        },
+                        {
+                            "stone_hammer": "query.is_item_name_any('slot.weapon.mainhand','ftb:stone_hammer_spawn_egg')"
+                        },
+                        {
+                            "part_builder": "query.is_item_name_any('slot.weapon.mainhand','ftb:part_builder_spawn_egg')"
+                        },
+                        {
+                            "campfire_haste": "query.is_item_name_any('slot.weapon.mainhand','ftb:haste_campfire_spawn_egg')"
+                        },
+                        {
+                            "campfire_health": "query.is_item_name_any('slot.weapon.mainhand','ftb:healthboost_campfire_spawn_egg')"
+                        },
+                        {
+                            "campfire_invisibility": "query.is_item_name_any('slot.weapon.mainhand','ftb:invisibility_campfire_spawn_egg')"
+                        },
+                        {
+                            "campfire_jumpboost": "query.is_item_name_any('slot.weapon.mainhand','ftb:jumpboost_campfire_spawn_egg')"
+                        },
+                        {
+                            "campfire_regeneration": "query.is_item_name_any('slot.weapon.mainhand','ftb:regeneration_campfire_spawn_egg') "
+                        },
+                        {
+                            "campfire_saturation": "query.is_item_name_any('slot.weapon.mainhand','ftb:saturation_campfire_spawn_egg')"
+                        },
+                        {
+                            "campfire_strength": "query.is_item_name_any('slot.weapon.mainhand','ftb:strength_campfire_spawn_egg')"
+                        },
+                        {
+                            "campfire_speed": "query.is_item_name_any('slot.weapon.mainhand','ftb:speed_campfire_spawn_egg')"
+                        }
+                    ],
+                    "on_entry": [
+                        "/titleraw @s actionbar {\"rawtext\":[{\"translate\":\"ftb.empty\"}]}"
+                    ]
+                },
+                "watering_can": {
+                    "on_entry": [
+                        "/titleraw @s times 0 0 0",
+                        "/titleraw @s[tag=!disable_item_help] actionbar {\"rawtext\":[{\"translate\":\"ftb.info.watering_can\"}]}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.is_item_name_any('slot.weapon.mainhand','ftb:watering_can')"
+                        }
+                    ]
+                },
+                "loot_box": {
+                    "on_entry": [
+                        "/titleraw @s times 0 0 0",
+                        "/titleraw @s[tag=!disable_item_help] actionbar {\"rawtext\":[{\"translate\":\"ftb.info.loot_box\"}]}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.is_item_name_any('slot.weapon.mainhand','ftb:loot_box')"
+                        }
+                    ]
+                },
+                "mesh": {
+                    "on_entry": [
+                        "/titleraw @s times 0 0 0",
+                        "/titleraw @s[tag=!disable_item_help] actionbar {\"rawtext\":[{\"translate\":\"ftb.info.mesh\"}]}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(query.is_item_name_any('slot.weapon.mainhand','ftb:iron_mesh') || query.is_item_name_any('slot.weapon.mainhand','ftb:gold_mesh') || query.is_item_name_any('slot.weapon.mainhand','ftb:diamond_mesh') || query.is_item_name_any('slot.weapon.mainhand','ftb:cloth_mesh'))"
+                        }
+                    ]
+                },
+                "diving": {
+                    "on_entry": [
+                        "/titleraw @s times 0 0 0",
+                        "/titleraw @s[tag=!disable_item_help] actionbar {\"rawtext\":[{\"translate\":\"ftb.info.diving\"}]}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_chestplate') || query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_boots') || query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_leggings') || query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_helmet'))"
+                        }
+                    ]
+                },
+                "forge": {
+                    "on_entry": [
+                        "/titleraw @s times 0 0 0",
+                        "/titleraw @s[tag=!disable_item_help] actionbar {\"rawtext\":[{\"translate\":\"ftb.info.forge\"}]}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.is_item_name_any('slot.weapon.mainhand','ftb:forge_spawn_egg')"
+                        }
+                    ]
+                },
+                "stencil_table": {
+                    "on_entry": [
+                        "/titleraw @s times 0 0 0",
+                        "/titleraw @s[tag=!disable_item_help] actionbar {\"rawtext\":[{\"translate\":\"ftb.info.stencil_table\"}]}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.is_item_name_any('slot.weapon.mainhand','ftb:stencil_table_spawn_egg')"
+                        }
+                    ]
+                },
+                "pattern_chest": {
+                    "on_entry": [
+                        "/titleraw @s times 0 0 0",
+                        "/titleraw @s[tag=!disable_item_help] actionbar {\"rawtext\":[{\"translate\":\"ftb.info.pattern_chest\"}]}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.is_item_name_any('slot.weapon.mainhand','ftb:pattern_chest_spawn_egg')"
+                        }
+                    ]
+                },
+                "center_pedestal": {
+                    "on_entry": [
+                        "/titleraw @s times 0 0 0",
+                        "/titleraw @s[tag=!disable_item_help] actionbar {\"rawtext\":[{\"translate\":\"ftb.info.center_pedestal\"}]}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.is_item_name_any('slot.weapon.mainhand','ftb:center_pedestal_spawn_egg')"
+                        }
+                    ]
+                },
+                "bonsai_pot": {
+                    "on_entry": [
+                        "/titleraw @s times 0 0 0",
+                        "/titleraw @s[tag=!disable_item_help] actionbar {\"rawtext\":[{\"translate\":\"ftb.info.bonsai_pot\"}]}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.is_item_name_any('slot.weapon.mainhand','ftb:bonsai_pot_spawn_egg')"
+                        }
+                    ]
+                },
+                "stone_hammer": {
+                    "on_entry": [
+                        "/titleraw @s times 0 0 0",
+                        "/titleraw @s[tag=!disable_item_help] actionbar {\"rawtext\":[{\"translate\":\"ftb.info.stone_hammer\"}]}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.is_item_name_any('slot.weapon.mainhand','ftb:stone_hammer_spawn_egg')"
+                        }
+                    ]
+                },
+                "part_builder": {
+                    "on_entry": [
+                        "/titleraw @s times 0 0 0",
+                        "/titleraw @s[tag=!disable_item_help] actionbar {\"rawtext\":[{\"translate\":\"ftb.info.part_builder\"}]}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.is_item_name_any('slot.weapon.mainhand','ftb:part_builder_spawn_egg')"
+                        }
+                    ]
+                },
+                "campfire_haste":{
+                    "on_entry": [
+                        "/titleraw @s times 0 0 0",
+                        "/titleraw @s[tag=!disable_item_help] actionbar {\"rawtext\":[{\"translate\":\"ftb.info.campfire\",\"with\":{\"rawtext\":[{\"translate\":\"potion.digSpeed\"}]}}]}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(query.is_item_name_any('slot.weapon.mainhand','ftb:haste_campfire_spawn_egg'))"
+                        }
+                    ]
+                },
+                "campfire_health":{
+                    "on_entry": [
+                        "/titleraw @s times 0 0 0",
+                        "/titleraw @s[tag=!disable_item_help] actionbar {\"rawtext\":[{\"translate\":\"ftb.info.campfire\",\"with\":{\"rawtext\":[{\"translate\":\"potion.healthBoost\"}]}}]}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(query.is_item_name_any('slot.weapon.mainhand','ftb:healthboost_campfire_spawn_egg'))"
+                        }
+                    ]
+                },
+                "campfire_invisibility":{
+                    "on_entry": [
+                        "/titleraw @s times 0 0 0",
+                        "/titleraw @s[tag=!disable_item_help] actionbar {\"rawtext\":[{\"translate\":\"ftb.info.campfire\",\"with\":{\"rawtext\":[{\"translate\":\"potion.invisibility\"}]}}]}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(query.is_item_name_any('slot.weapon.mainhand','ftb:invisibility_campfire_spawn_egg'))"
+                        }
+                    ]
+                },
+                "campfire_jumpboost":{
+                    "on_entry": [
+                        "/titleraw @s times 0 0 0",
+                        "/titleraw @s[tag=!disable_item_help] actionbar {\"rawtext\":[{\"translate\":\"ftb.info.campfire\",\"with\":{\"rawtext\":[{\"translate\":\"potion.jump\"}]}}]}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(query.is_item_name_any('slot.weapon.mainhand','ftb:jumpboost_campfire_spawn_egg'))"
+                        }
+                    ]
+                },
+                "campfire_regeneration":{
+                    "on_entry": [
+                        "/titleraw @s times 0 0 0",
+                        "/titleraw @s[tag=!disable_item_help] actionbar {\"rawtext\":[{\"translate\":\"ftb.info.campfire\",\"with\":{\"rawtext\":[{\"translate\":\"potion.regeneration\"}]}}]}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(query.is_item_name_any('slot.weapon.mainhand','ftb:regeneration_campfire_spawn_egg'))"
+                        }
+                    ]
+                },
+                "campfire_saturation":{
+                    "on_entry": [
+                        "/titleraw @s times 0 0 0",
+                        "/titleraw @s[tag=!disable_item_help] actionbar {\"rawtext\":[{\"translate\":\"ftb.info.campfire\",\"with\":{\"rawtext\":[{\"translate\":\"potion.saturation\"}]}}]}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(query.is_item_name_any('slot.weapon.mainhand','ftb:saturation_campfire_spawn_egg'))"
+                        }
+                    ]
+                },
+                "campfire_strength":{
+                    "on_entry": [
+                        "/titleraw @s times 0 0 0",
+                        "/titleraw @s[tag=!disable_item_help] actionbar {\"rawtext\":[{\"translate\":\"ftb.info.campfire\",\"with\":{\"rawtext\":[{\"translate\":\"potion.damageBoost\"}]}}]}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(query.is_item_name_any('slot.weapon.mainhand','ftb:strength_campfire_spawn_egg'))"
+                        }
+                    ]
+                },
+                "campfire_speed":{
+                    "on_entry": [
+                        "/titleraw @s times 0 0 0",
+                        "/titleraw @s[tag=!disable_item_help] actionbar {\"rawtext\":[{\"translate\":\"ftb.info.campfire\",\"with\":{\"rawtext\":[{\"translate\":\"potion.moveSpeed\"}]}}]}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(query.is_item_name_any('slot.weapon.mainhand','ftb:speed_campfire_spawn_egg'))"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

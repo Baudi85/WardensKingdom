@@ -1,0 +1,33 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.polarbear.baby_transform": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"position": [0, 0, 0],
+					"scale": [1, 1, 1]
+				}
+			}
+		},
+		"animation.polarbear.move": {
+			"loop": true,
+			"bones": {
+				"leg0": {
+					"rotation": ["query.standing_scale * 63", 0, 0],
+					"position": [0, "-1 * query.standing_scale", "6 * query.standing_scale"]
+				},
+				"leg1": {
+					"rotation": ["query.standing_scale * 63", 0, 0],
+					"position": [0, "-1 * query.standing_scale", "6 * query.standing_scale"]
+				},
+				"leg2": {
+					"rotation": ["(query.standing_scale > 1) ? (query.standing_scale * 81) - this : 0", 0, 0]
+				},
+				"leg3": {
+					"rotation": ["(query.standing_scale > 1) ? (query.standing_scale * 81) - this : 0", 0, 0]
+				}
+			}
+		}
+	}
+}

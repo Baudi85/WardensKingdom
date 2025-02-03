@@ -1,0 +1,20 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.g2skeleton.scale": {
+			"loop": true,
+			"bones": {
+				"waist": {
+					"position": [0, -1, 0],
+					"scale": [0.5, 0.5, 0.5]
+				},
+				"head": {
+					"scale": [0.5, 0.5, 0.5]
+				},
+				"rightItem": {
+					"scale": [1.5, 1.5, 1.5]
+				}
+			}
+		}
+	}
+}

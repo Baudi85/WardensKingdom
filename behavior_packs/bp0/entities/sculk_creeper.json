@@ -1,0 +1,415 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "g2crafted:sculk_creeper",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "runtime_identifier": "minecraft:warden"
+    },
+    "component_groups": {
+      "emerging": {
+        "minecraft:behavior.emerge": {
+          "duration": 4.16,
+          "on_done": {
+            "event": "minecraft:emerged",
+            "target": "self"
+          }
+        }
+      },
+      "death": {
+        "minecraft:transformation": {
+          "into": "g2crafted:sculk_creeper_cracked",
+          "drop_equipment": false
+        }
+      },
+      "minecraft:ranged_attack_teleport": {
+        "minecraft:behavior.ranged_attack": {
+          "attack_interval_min": 0.5,
+          "attack_interval_max": 0.5,
+          "attack_radius": 8
+         },
+         "minecraft:shooter": {
+          "def": "g2crafted:sculk_projectile"
+         },
+         "minecraft:timer":{
+          "looping": false,
+          "randomInterval":false,
+          "time": [0.6, 0.6],
+          "time_down_event": {
+            "event":"reload_ranged_attack"
+          }
+        }
+      },
+      "minecraft:ranged_attack_explode": {
+        "minecraft:behavior.ranged_attack": {
+          "attack_interval_min": 0.5,
+          "attack_interval_max": 0.5,
+          "attack_radius": 8
+         },
+         "minecraft:shooter": {
+          "def": "g2crafted:sculk_projectile_red"
+        },
+        "minecraft:timer":{
+          "looping": false,
+          "randomInterval":false,
+          "time": [0.6, 0.6],
+          "time_down_event": {
+           "event":"reload_ranged_attack"
+          }
+        }
+      },
+      "minecraft:ranged_attack_effect1": {
+        "minecraft:behavior.ranged_attack": {
+          "attack_interval_min": 0.5,
+          "attack_interval_max": 0.5,
+          "attack_radius": 8
+         },
+         "minecraft:shooter": {
+          "def": "g2crafted:sculk_projectile_teal"
+        },
+        "minecraft:timer":{
+          "looping": false,
+          "randomInterval":false,
+         "time": [0.6, 0.6],
+         "time_down_event": {
+           "event":"reload_ranged_attack"
+          }
+        }
+      },
+      "minecraft:ranged_attack_spit": {
+        "minecraft:behavior.ranged_attack": {
+          "attack_interval_min": 0.5,
+          "attack_interval_max": 0.5,
+          "attack_radius": 8
+         },
+         "minecraft:shooter": {
+          "def": "g2crafted:sculker_spit"
+         },
+         "minecraft:timer":{
+          "looping": false,
+          "randomInterval":false,
+          "time": [0.6, 0.6],
+          "time_down_event": {
+            "event":"reload_ranged_attack"
+          }
+        }
+      },
+      "reload_timer": {
+        "minecraft:behavior.sonic_boom": {
+          "priority": 3,
+          "duration": 3.0,
+          "speed_multiplier": 1.0,
+          "attack_damage": 2,
+          "attack_range_horizontal": 4,
+          "attack_range_vertical": 5,
+          "attack_cooldown": 1.2,
+          "knockback_vertical_strength": 1.5,
+          "knockback_horizontal_strength": 1.5,
+          "knockback_height_cap": 0.5,
+          "duration_until_attack_sound": 1.7,
+          "charge_sound": "sonic_charge",
+          "attack_sound": "sonic_boom"
+        },
+        "minecraft:behavior.melee_attack": {
+          "priority": 4,
+          "speed_multiplier": 1.0,
+          "melee_fov": 360
+        },
+        "minecraft:attack": {
+          "damage": 3
+        },
+        "minecraft:timer":{
+         "looping": false,
+         "randomInterval":false,
+         "time": [1.5, 1.5],
+         "time_down_event": {
+           "event":"reset_ranged_attack"
+          }
+        }
+      },
+      "setup_timer": {
+        "minecraft:behavior.sonic_boom": {
+          "priority": 3,
+          "duration": 3.0,
+          "speed_multiplier": 1.0,
+          "attack_damage": 2,
+          "attack_range_horizontal": 4,
+          "attack_range_vertical": 5,
+          "attack_cooldown": 1.2,
+          "knockback_vertical_strength": 1.5,
+          "knockback_horizontal_strength": 1.5,
+          "knockback_height_cap": 0.5,
+          "duration_until_attack_sound": 1.7,
+          "charge_sound": "sonic_charge",
+          "attack_sound": "sonic_boom"
+        },
+        "minecraft:behavior.melee_attack": {
+          "priority": 4,
+          "speed_multiplier": 1.0,
+          "melee_fov": 360
+        },
+        "minecraft:attack": {
+          "damage": 3
+        },
+        "minecraft:timer":{
+         "looping": false,
+         "randomInterval":false,
+         "time": [4.16, 4.16],
+         "time_down_event": {
+           "event":"reset_ranged_attack"
+         }
+        }
+      }
+    },
+
+    "components": {
+      "minecraft:on_death": {
+        "event": "dead",
+        "target": "self"
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.95
+      },
+      "minecraft:type_family": {
+        "family": [ "sculksense","creeper", "undead", "monster" ]
+      },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0,
+        "breathesWater": true
+      },
+
+      "minecraft:health": {
+        "value": 64,
+        "max": 64
+      },
+      "minecraft:movement": {
+        "value": 0.2
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "fall",
+          "deals_damage": false
+        }
+      },
+      "minecraft:navigation.walk": {
+        "is_amphibious": true,
+        "avoid_sun": true,
+        "avoid_water": true
+      },
+      "minecraft:movement.basic": {
+      },
+      "minecraft:jump.static": {
+      },
+      "minecraft:can_climb": {
+      },
+      "minecraft:behavior.float": {
+        "priority": 8
+      },
+      "minecraft:nameable": {
+      },
+      "minecraft:equipment": {
+        "table": "loot_tables/entities/creeper_gear.json"
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 1
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 2,
+        "reselect_targets": true,
+        "entity_types": [
+          {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "value": "player"
+            },
+            "max_dist": 16
+          },
+          {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "value": "irongolem"
+            },
+            "max_dist": 16
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "baby_turtle"
+                },
+                {
+                  "test": "in_water",
+                  "subject": "other",
+                  "operator": "!=",
+                  "value": true
+                }
+              ]
+            },
+            "max_dist": 16
+          }
+        ],
+        "must_see": true
+      },
+      "minecraft:behavior.flee_sun": {
+        "priority": 2,
+        "speed_multiplier": 1
+      },
+      "minecraft:behavior.avoid_mob_type": {
+        "priority": 4,
+        "entity_types": [
+          {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "value": "wolf"
+            },
+            "max_dist": 6,
+            "walk_speed_multiplier": 1.2,
+            "sprint_speed_multiplier": 1.2
+          }
+        ]
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 5,
+        "speed_multiplier": 1
+      },
+      "minecraft:follow_range": 30,
+      "minecraft:behavior.look_at_player": {
+        "priority": 6,
+        "look_distance": 8
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 6
+      },
+      "minecraft:physics": {
+      }
+    },
+
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "setup_timer",
+            "emerging"
+          ]
+        }
+      },
+      "reset_ranged_attack": {
+        "randomize": [
+          {
+            "weight": 1,
+            "randomize": [
+              {
+              "weight": 30,
+              "filters": {},
+              "remove": {
+                "component_groups": [
+                  "reload_timer"
+                  ]
+                },
+                "add": {
+                  "component_groups": [
+                    "minecraft:ranged_attack_explode"
+                  ]
+                }
+              },
+              {
+              "weight": 20,
+              "filters": {},
+              "remove": {
+                "component_groups": [
+                  "reload_timer"
+                  ]
+                },
+                "add": {
+                  "component_groups": [
+                    "minecraft:ranged_attack_teleport"
+                  ]
+                }
+              },
+              {
+              "weight": 60,
+              "filters": {},
+              "remove": {
+                "component_groups": [
+                  "reload_timer"
+                  ]
+                },
+                "add": {
+                  "component_groups": [
+                    "minecraft:ranged_attack_effect1"
+                  ]
+                }
+              },
+              {
+              "weight": 70,
+              "filters": {},
+              "remove": {
+                "component_groups": [
+                  "reload_timer"
+                  ]
+                },
+                "add": {
+                  "component_groups": [
+                    "minecraft:ranged_attack_spit"
+                  ]
+                }
+              }
+            ]
+          } 
+        ]
+      },
+      "reload_ranged_attack": {
+        "remove": {
+          "component_groups": [
+            "minecraft:ranged_attack_explode",
+            "minecraft:ranged_attack_teleport",
+            "minecraft:ranged_attack_effect1",
+            "minecraft:ranged_attack_spit"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "reload_timer"
+          ]
+        }
+      },
+      "minecraft:emerged": {
+        "remove": {
+          "component_groups": [
+            "emerging"
+          ]
+        }
+      },
+      "dead": {
+        "add": {
+            "component_groups": [
+                "death"
+            ]
+        }
+      },
+      "emerge_setter": {
+        "add": {
+          "component_groups": [
+            "emerging"
+          ]
+        }
+      },
+      "minecraft:entity_summoned": {
+        "add": {
+          "component_groups": [
+            "emerging"
+          ]
+        }
+      }
+    }
+  }
+}

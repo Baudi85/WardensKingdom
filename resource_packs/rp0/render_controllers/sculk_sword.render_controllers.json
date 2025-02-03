@@ -1,0 +1,16 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.sculk_sword": {
+      "geometry": "Geometry.default",
+      "materials": [ 
+        { "*": "variable.is_enchanted ? Material.enchanted : Material.default" },
+        { "en_wave": "Material.spit_" },
+        { "blade2": "Material.spit_" },
+        { "blade": "Material.spit_" },
+        { "glow_*": "Material.spit_" }
+      ],
+      "textures": [ "Texture.default", "Texture.enchanted" ]
+    }
+  }
+}

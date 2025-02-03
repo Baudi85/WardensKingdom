@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.sculk_projectile.setup": {
+      "states": {
+		    "default": {
+			    "transitions": [
+			  {
+				"command_example": "query.skin_id == 2"
+			  }
+			]
+		},
+		"command_example": {
+			"transitions": [
+		    {
+			  "default": "query.skin_id != 2"
+		    }
+		  ],
+      "on_entry": [
+        "/execute @p[r=2] ~ ~ ~ playanimation @p animation.sculk_rojectile.teleport",
+        "/execute @e[r=2] ~ ~ ~ spreadplayers 16 16 2 16 @e[r=2]",
+        "/execute @s ~ ~ ~ kill @s",
+        "@s stop_command"
+        ]
+      }
+    }
+  }
+}
+}

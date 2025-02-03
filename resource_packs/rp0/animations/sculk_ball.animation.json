@@ -1,0 +1,28 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.sculk_ball.boom": {
+			"loop": true,
+			"animation_length": 1.28,
+			"sound_effects": {
+				"0.0": {
+					"effect": "lazer"
+				},
+				"0.68": {
+					"effect": "lazer_out"
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "sonic_boom"
+				},
+				"0.64": {
+					"effect": "sonic_boom"
+				},
+				"1.28": {
+					"effect": "sonic_boom"
+				}
+			}
+		}
+	}
+}

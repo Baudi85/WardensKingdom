@@ -1,0 +1,36 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "g2crafted:sculk_tendral",
+      "materials": {
+        "default": "enderman",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "default": "textures/entity/tendral",
+        "enchanted": "textures/attachables/enchanted_glint"
+      },
+      "geometry": {
+        "default": "geometry.held_sculk_tendral"
+      },
+      "animations": {
+        "wield_first_person": "animation.sculk_tendral_first_person.hold",
+        "wield": "animation.sculk_tendral.hold"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "wield": "!context.is_first_person"
+          },
+          {
+            "wield_first_person": "context.is_first_person"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.item_default"
+      ]
+    }
+  }
+}

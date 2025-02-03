@@ -1,0 +1,13 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "g2crafted:warden_heart",
+			"category": "Items"
+		},
+		"components": {
+			"minecraft:icon": "warden_heart",
+			"minecraft:render_offsets": "apple"
+		}
+	}
+}

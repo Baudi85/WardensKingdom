@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "g2crafted:sculk_power",
+      "materials": { "default": "entity_beam_additive" },
+      "textures": {
+        "default": "textures/entity/sculk_power"
+      },
+      "geometry": {
+        "default": "geometry.sculk_power"
+      },
+      "animations": {
+        "face_player": "animation.actor.billboard",
+        "general": "animation.sculk_power.general"
+      },
+      "particle_effects": {
+        "trail": "minecraft:shriek_particle"
+      },
+      "scripts": {
+        "animate": [
+          "face_player",
+          "general"
+        ]
+      },
+      "render_controllers": [ "controller.render.fireball" ]
+    }
+  }
+}

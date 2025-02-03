@@ -1,0 +1,44 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "g2crafted:sculk_projectile_teal",
+      "materials": { 
+        "default": "enderman",
+        "light_beams": "entity_beam_additive"
+    },
+    "textures": {
+      "default": "textures/entity/sculck_mobs/sculk_projectiles/sculk_projectile_teal"
+    },
+    "geometry": {
+      "default": "geometry.sculk_projectile"
+    },
+      "spawn_egg": {
+        "overlay_color": "#d1d6b6",
+        "base_color": "#05625d"
+		},
+    "scripts": {
+      "animate": [
+        "wiggle"
+      ]
+    },
+    "animations": {
+      "wiggle": "animation.sculk_projectile.wiggle"
+    },
+    "particle_effects": {
+      "echo": "g2crafted:sculk_trail"
+    },
+    "sound_effects": {
+      "sculk_projectile": "mob.sculker.projectile",
+      "light_beam": "mob.sculk_creeper.light_Beam",
+      "crack1": "mob.sculk_creeper.crack",
+      "crack2": "mob.sculk_creeper.crack",
+      "crack3": "mob.sculk_creeper.crack",
+      "before_expolsion": "mob.sculk_creeper.before_expolsion",
+      "explosion": "mob.sculk_creeper.explosion",
+      "sound_of_echo": "mob.sculk_creeper.sound_of_echo"
+    },
+    "render_controllers": [ "controller.render.sculk_projectile" ]
+    }
+  }
+}

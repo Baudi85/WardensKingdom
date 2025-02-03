@@ -1,0 +1,21 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.sculk_creeper": {
+      "geometry": "geometry.default",
+      "materials": [
+        { "*": "Material.default" },
+        { "spit_*": "Material.spit_" },
+        { "trail_*": "Material.spit_" },
+        { "spectral_*": "Material.spit_" }
+      ],
+      "textures": [ "texture.default" ],
+      "is_hurt_color" : {
+        "r": 0.0,
+        "g": 1.0,
+        "b": 0.7,
+        "a": 0.5
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "materials": {
+    "version": "1.0.0",
+    "g2craft:entity_alphatest": {},
+    "glow_glass_blender:entity_emissive_alpha": {
+      "+defines": [ "USE_ONLY_EMISSIVE" ]
+    },
+    "translucence:entity_alphatest": {},
+    "glass:entity": {
+      "+states": [ "Blending" ]
+    }
+  }
+}

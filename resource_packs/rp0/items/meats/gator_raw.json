@@ -1,0 +1,14 @@
+{
+ "format_version": "1.10",
+ "minecraft:item": {
+  "description": {
+   "identifier": "g2crafted:gator_raw",
+   "category": "Nature"
+  },
+  "components": {
+    "minecraft:icon": "gator_raw",
+    "minecraft:use_animation": "eat",
+    "minecraft:render_offsets": "apple"
+    }
+  }
+}

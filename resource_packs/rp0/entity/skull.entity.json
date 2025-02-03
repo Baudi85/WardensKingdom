@@ -1,0 +1,25 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:skull",
+      "materials": { "default": "skeleton" },
+      "textures": {
+        "default": "textures/entity/steve",
+        "steve": "textures/entity/skulls/cowhead",
+        "skeleton": "textures/entity/rocky",
+        "wither": "textures/entity/skulls/bush",
+        "zombie": "textures/entity/skulls/track3",
+        "creeper": "textures/entity/skulls/beam"
+      },
+      "geometry": {
+        "default": "geometry.cow_head",
+        "steve": "geometry.cow_head",
+        "skeleton": "geometry.skull_bed",
+        "wither": "geometry.bush",
+        "zombie": "geometry.track_3",
+        "creeper": "geometry.beam"
+      }
+    }
+  }
+}

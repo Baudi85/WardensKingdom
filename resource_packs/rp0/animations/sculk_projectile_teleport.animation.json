@@ -1,0 +1,19 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.sculk_rojectile.teleport": {
+			"loop": true,
+			"animation_length": 0.24,
+			"sound_effects": {
+				"0.0": {
+					"effect": "port"
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "teli"
+				}
+			}
+		}
+	}
+}

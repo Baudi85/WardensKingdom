@@ -1,0 +1,45 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.echo_wave",
+				"texture_width": 512,
+				"texture_height": 256,
+				"visible_bounds_width": 9,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "burst",
+					"parent": "bone",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-32, 0, -32], "size": [64, 0, 64], "uv": [-64, 0]}
+					]
+				},
+				{
+					"name": "wave_1",
+					"parent": "bone",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-32, 0, -32], "size": [64, 0, 64], "uv": [64, 0]}
+					]
+				},
+				{
+					"name": "wave_2",
+					"parent": "bone",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-64, 0, -64], "size": [128, 0, 128], "uv": [-128, 64]}
+					]
+				}
+			]
+		}
+	]
+}

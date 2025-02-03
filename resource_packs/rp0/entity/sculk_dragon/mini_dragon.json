@@ -1,0 +1,49 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "g2crafted:mini_dragon",
+      "materials": {
+        "default": "enderman"
+      },
+      "textures": {
+        "default": "textures/entity/sculk_dragon"
+      },
+      "geometry": {
+        "default": "geometry.sculk_dragon"
+			},
+			"scripts": {
+			  "animate": [
+          { "attack": "query.facing_target_to_range_attack" },
+          { "sonic_boom": "query.is_sonic_boom" },
+          "turn",
+          "turn_two",
+          { "death": "query.skin_id == 2" }
+				]
+			},
+      "animations": {
+        "death": "animation.sculk_dragon.death",
+        "general": "animation.sculk_dragon.fly",
+        "turn": "controller.animation.sculk_dragon.turn",
+        "turn_two": "controller.animation.sculk_dragon.turn_two",
+        "turning_left": "animation.sculk_dragon.turn_left",
+        "turning_right": "animation.sculk_dragon.turn_right",
+        "attack": "animation.sculk_dragon.attack",
+        "sonic_boom": "animation.sculk_dragon.sonic_boom",
+        "look_at_target": "animation.mini_dragon.look_at_target"
+      },
+      "particle_effects": {
+        "sonic_boom": "minecraft:sonic_explosion",
+        "trail": "minecraft:shriek_particle"
+      },
+      "sound_effects": {
+        "flap": "mob.sculkdragon.flap"
+      },
+      "render_controllers": [ "controller.render.minidragon" ],
+      "spawn_egg": {
+        "overlay_color": "#C70EE8",
+        "base_color": "#248C73"
+      }
+    }
+  }
+}

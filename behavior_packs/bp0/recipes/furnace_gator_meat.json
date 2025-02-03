@@ -1,0 +1,14 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "minecraft:furnace_gator_meat"
+    },
+
+
+    "tags": ["furnace", "smoker"],
+    "input": "g2crafted:gator_raw",
+    "output": "g2crafted:gator_cooked"
+  }
+  
+}

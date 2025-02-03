@@ -1,0 +1,27 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.sculk_blade": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "throw_bottle": "query.is_item_name_any('slot.weapon.mainhand','g2crafted:sculk_blade') && q.item_remaining_use_duration > 0.0"
+                        }
+                    ]
+                },
+                "throw_bottle": {
+                    "transitions": [
+                        {
+                            "default": "1.0"
+                        }
+                    ],
+                    "on_entry": [
+                        "@s ranged_spit_timer"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "g2crafted:death_dragon",
+      "materials": {
+        "default": "enderman",
+        "echo": "entity_beam_additive"
+      },
+      "textures": {
+        "default": "textures/entity/sculk_dragon_death"
+      },
+      "geometry": {
+        "default": "geometry.sculk_dragon_death"
+			},
+			"scripts": {
+			  "animate": [
+				  "death"
+				]
+			},
+      "animations": {
+        "death": "animation.sculk_dragon.death"
+      },
+      "sound_effects": {
+        "implode": "mob.sculkdragon.death",
+        "blast": "mob.sculkdragon.sonic_blast"
+      },
+      "render_controllers": [ "controller.render.sculk_dragon_death" ],
+      "spawn_egg": {
+        "overlay_color": "#C70EE8",
+        "base_color": "#248C73"
+      }
+    }
+  }
+}

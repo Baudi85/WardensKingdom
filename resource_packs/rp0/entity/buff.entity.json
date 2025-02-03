@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "g2crafted:buff",
+      "materials": { "default": "skeleton" },
+      "textures": {
+        "default": "textures/entity/buffalo/buff",
+        "saddled": "textures/entity/buffalo/buff_saddle"
+      },
+      "geometry": {
+        "default": "geometry.buffalo"
+      },
+      "animations": {
+        "walk": "animation.quadruped.walk",
+        "look_at_target": "animation.common.look_at_target"
+      },
+      "scripts": {
+        "animate": [
+          { "walk": "query.modified_move_speed" },
+          "look_at_target"
+        ]
+      },
+      "render_controllers": [ "controller.render.buff" ],
+      "spawn_egg": {
+        "overlay_color": "#d7d696",
+        "base_color": "#282015"
+      }
+    }
+  }
+}

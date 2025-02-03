@@ -1,0 +1,59 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "g2crafted:sea",
+      "materials": {
+        "default": "skeleton"
+      },
+      "textures": {
+        "armorer": "textures/entity/sea/armorer",
+        "butcher": "textures/entity/sea/butcher",
+        "cartographer": "textures/entity/sea/cartographer",
+        "cleric": "textures/entity/sea/cleric",
+        "farmer": "textures/entity/sea/farmer",
+        "fisherman": "textures/entity/sea/fisherman",
+        "fletcher": "textures/entity/sea/fletcher",
+        "leatherworker": "textures/entity/sea/leatherworker",
+        "librarian": "textures/entity/sea/librarian",
+        "shepherd": "textures/entity/sea/shepherd",
+        "tool_smith": "textures/entity/sea/toolsmith",
+        "weapon_smith": "textures/entity/sea/weaponsmith",
+        "stonemason": "textures/entity/sea/stonemason",
+        "nitwit": "textures/entity/sea/nitwit",
+        "unskilled": "textures/entity/sea/unskilled"
+      },
+      "geometry": {
+        "default": "geometry.sea"
+      },
+      "scripts": {
+        "scale": "0.9375",
+        "pre_animation": [
+          "variable.num_professions = 15;",
+          "variable.num_tiers = 3;",
+          "variable.profession_index = (query.variant < variable.num_professions ? query.variant : 0);",
+          "variable.level_index = query.trade_tier;"
+        ]
+      },
+      "animations": {
+        "general": "animation.sea.general",
+        "look_at_target": "animation.common.look_at_target",
+        "move": "animation.sea.move",
+        "raise_arms": "animation.sea.raise_arms",
+        "baby_transform": "animation.sea.baby_transform",
+        "get_in_bed": "animation.sea.get_in_bed"
+      },
+      "animation_controllers": [
+        { "general": "controller.animation.sea.general" },
+        { "move": "controller.animation.sea.move" },
+        { "raise_arms": "controller.animation.sea.raise_arms" },
+        { "baby": "controller.animation.sea.baby" }
+      ],
+      "render_controllers": [ "controller.render.mushroom_villager" ],
+      "spawn_egg": {
+        "base_color": "#0f5a59",
+        "overlay_color": "#8dd7d6"
+      }
+    }
+  }
+}

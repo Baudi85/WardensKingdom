@@ -1,0 +1,47 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.sculk_dragon.turn": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [ "general" ],
+					"transitions": [
+						{ "turning_right": "query.yaw_speed > 0.35" }
+					],
+					"blend_transition": 1.5
+				},
+				"turning_right" : {
+					"animations" : [ "turning_right" ],
+					"transitions" : [
+						{
+							"default" : "query.yaw_speed < 0.0 && !query.facing_target_to_range_attack"
+						}
+					],
+					"blend_transition": 1.5
+				}
+			}
+		},
+		"controller.animation.sculk_dragon.turn_two": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [ "general" ],
+					"transitions": [
+						{ "turning_left": "query.yaw_speed < -0.35" }
+					],
+					"blend_transition": 1.5
+				},
+				"turning_left" : {
+					"animations" : [ "turning_left" ],
+					"transitions" : [
+						{
+							"default" : "query.yaw_speed > 0.0 && !query.facing_target_to_range_attack"
+						}
+					],
+					"blend_transition": 1.5
+				}
+			}
+		}
+	}
+}

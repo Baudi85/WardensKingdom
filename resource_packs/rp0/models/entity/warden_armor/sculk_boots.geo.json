@@ -1,0 +1,98 @@
+{
+	"format_version": "1.10.0",
+	"geometry.sculk_boots": {
+		"texturewidth": 32,
+		"textureheight": 32,
+		"visible_bounds_width": 3,
+		"visible_bounds_height": 3.5,
+		"visible_bounds_offset": [0, 1.25, 0],
+		"bones": [
+			{
+				"name": "waist",
+				"pivot": [0, 12, 0]
+			},
+			{
+				"name": "body",
+				"parent": "waist",
+				"pivot": [0, 24, 0]
+			},
+			{
+				"name": "rightLeg",
+				"parent": "body",
+				"pivot": [-1.9, 12, 0]
+			},
+			{
+				"name": "flipper_1",
+				"parent": "rightLeg",
+				"pivot": [-1.9, 2, 1],
+				"cubes": [
+					{"origin": [-4, 0, -2], "size": [4, 6, 4], "uv": [0, 10], "inflate": 0.2}
+				]
+			},
+			{
+				"name": "bone3",
+				"parent": "flipper_1",
+				"pivot": [0, 0, 0],
+				"cubes": [
+					{"origin": [-4.5, 1.79, -2.5], "size": [1, 1, 1], "uv": [0, 0]},
+					{"origin": [-4.5, -0.21, -2.5], "size": [2, 2, 2], "uv": [12, 0]}
+				]
+			},
+			{
+				"name": "bone4",
+				"parent": "flipper_1",
+				"pivot": [0, 0, 0],
+				"cubes": [
+					{"origin": [-0.5, -0.21, -2.5], "size": [1, 2, 1], "uv": [16, 4], "mirror": true}
+				]
+			},
+			{
+				"name": "spec_right",
+				"parent": "rightLeg",
+				"pivot": [-1.9, 12, 0],
+				"cubes": [
+					{"origin": [-4, 0, -2], "size": [4, 6, 4], "uv": [0, 10], "inflate": 0.2}
+				]
+			},
+			{
+				"name": "leftLeg",
+				"parent": "body",
+				"pivot": [1.9, 12, 0],
+				"mirror": true
+			},
+			{
+				"name": "flipper_2",
+				"parent": "leftLeg",
+				"pivot": [1.9, 2, 1],
+				"cubes": [
+					{"origin": [0, 0, -2], "size": [4, 6, 4], "uv": [0, 0], "inflate": 0.2}
+				]
+			},
+			{
+				"name": "bone",
+				"parent": "flipper_2",
+				"pivot": [0, 0, 0],
+				"cubes": [
+					{"origin": [2.5, -0.21, -2.5], "size": [2, 2, 2], "uv": [16, 14]},
+					{"origin": [3.5, 1.79, -2.5], "size": [1, 1, 1], "uv": [0, 12]}
+				]
+			},
+			{
+				"name": "bone2",
+				"parent": "flipper_2",
+				"pivot": [0, 0, 0],
+				"cubes": [
+					{"origin": [-0.5, -0.21, -2.5], "size": [1, 2, 1], "uv": [16, 4]}
+				]
+			},
+			{
+				"name": "spec_left",
+				"parent": "leftLeg",
+				"pivot": [1.9, 12, 0],
+				"cubes": [
+					{"origin": [0, 0, -2], "size": [4, 6, 4], "uv": [0, 0], "inflate": 0.2}
+				]
+			}
+		]
+	}
+}

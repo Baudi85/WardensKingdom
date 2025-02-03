@@ -1,0 +1,39 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.3d_item": {
+      "arrays": {
+        "geometries": {
+          "array.geos": [
+            "geometry.sculk_core",
+            "geometry.dragon_spine",
+            "geometry.warden_heart",
+            "geometry.sculk_gem",
+            "geometry.sculk_tendral"
+          ]
+        },
+        "textures": {
+          "Array.skins": [
+            "Texture.sculk_core",
+            "Texture.dragon_spine",
+            "Texture.warden_heart",
+            "Texture.sculk_gem",
+            "Texture.sculk_tendral"
+          ]
+        }
+      },
+      "geometry": "Array.geos[query.mark_variant]",
+      "materials": [
+        { "*": "Material.default" },
+        { "swirl_*": "Material.glowing" },
+        { "outerglass": "Material.glowing" },
+        { "innerglass": "Material.glowing" },
+        { "crystal": "Material.glowing" },
+        { "gem_2": "Material.glowing" },
+        { "heart2": "Material.bright" },
+        { "jitter": "Material.bright" }
+      ],
+      "textures": [ "Array.skins[query.mark_variant]" ]
+    }
+  }
+}

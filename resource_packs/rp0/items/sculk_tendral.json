@@ -1,0 +1,13 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "g2crafted:sculk_tendral",
+			"category": "Items"
+		},
+		"components": {
+			"minecraft:icon": "sculk_tendral",
+			"minecraft:render_offsets": "apple"
+		}
+	}
+}

@@ -1,0 +1,37 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+	  {
+		"description": {
+		  "identifier": "geometry.dragon_portal",
+		  "texture_width": 512,
+		  "texture_height": 256,
+		  "visible_bounds_width": 22,
+		  "visible_bounds_height": 8,
+		  "visible_bounds_offset": [0, 1, 0]
+		},
+		"bones": [
+			{
+				"name": "body",
+				"pivot": [0, 0, 0]
+			},
+			{
+				"name": "spinner",
+				"parent": "body",
+				"pivot": [0, 0, -1],
+				"cubes": [
+					{"origin": [-32, -32, -1], "size": [64, 64, 0], "uv": [272, 113]}
+				]
+			},
+			{
+				"name": "spinner2",
+				"parent": "body",
+				"pivot": [0, 0, 1],
+				"cubes": [
+					{"origin": [-32, -32, 1], "size": [64, 64, 0], "uv": [272, 113], "mirror": true}
+			    ]
+		     }
+		 ]
+	  }
+   ]
+}

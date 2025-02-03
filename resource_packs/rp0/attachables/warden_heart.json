@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "g2crafted:warden_heart",
+      "materials": {
+        "default": "enderman",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "default": "textures/entity/warden_heart",
+        "enchanted": "textures/attachables/enchanted_glint"
+      },
+      "geometry": {
+        "default": "geometry.held_warden_heart"
+      },
+      "sound_effects": {
+        "beats": "mob.held_heart.idle"
+      },
+      "animations": {
+        "wield_first_person": "animation.warden_heart_first_person.hold",
+        "wield": "animation.warden_heart.hold"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "wield": "!context.is_first_person"
+          },
+          {
+            "wield_first_person": "context.is_first_person"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.item_default"
+      ]
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.items",
+  "texture_data": {
+  "cotton_mesh": {
+     "textures": "textures/items/cotton_mesh"
+   },
+   "cotton_ball": {
+      "textures": "textures/items/cotton_ball"
+   },
+   "gator_cooked": {
+      "textures": "textures/items/gator_cooked"
+   },
+   "gator_raw": {
+      "textures": "textures/items/gator_raw"
+   },
+   "buffalo_beef_cooked": {
+      "textures": "textures/items/buffalo_beef_cooked"
+   },
+   "buffalo_beef_raw": {
+      "textures": "textures/items/buffalo_beef_raw"
+   },
+   "unstable_core": {
+      "textures": "textures/items/unstable_core"
+   },
+   "dragon_spine": {
+      "textures": "textures/items/dragon_spine"
+   },
+   "sculk_tendral": {
+      "textures": "textures/items/sculk_tendral"
+   },
+   "warden_heart": {
+      "textures": "textures/items/warden_heart"
+   },
+   "sculk_gem": {
+      "textures": "textures/items/sculk_gem"
+   },
+   "sculk_flesh": {
+      "textures": "textures/items/sculk_flesh"
+   },
+   "sculk_ribs": {
+      "textures": "textures/items/sculk_ribs"
+   },
+   "sculk_scales": {
+      "textures": "textures/items/sculk_scales"
+   },
+   "sieve_rumble_plate": {
+      "textures": "textures/items/sieve_rumble_plate"
+   },
+   "3d_bed": {
+      "textures": "textures/items/3d_bed"
+   },
+   "sculk_blade": {
+      "textures": "textures/items/sculk_blade"
+   },
+   "illuminite_crystal": {
+      "textures": "textures/items/illuminite_crystal"
+   },
+   "sand_dust": {
+      "textures": "textures/items/sand_dust"
+   },
+   "iron_dust": {
+      "textures": "textures/items/iron_dust"
+   },
+   "gold_dust": {
+      "textures": "textures/items/gold_dust"
+   },
+   "copper_dust": {
+      "textures": "textures/items/copper_dust"
+   },
+   "cactus_piece": {
+      "textures": "textures/items/cactus_piece"
+   },
+   "raw_rubber": {
+      "textures": "textures/items/raw_rubber"
+   },
+   "pebble": {
+      "textures": "textures/items/pebble"
+   },
+   "pebble_andesite": {
+      "textures": "textures/items/pebble_andesite"
+   },
+   "pebble_diorite": {
+      "textures": "textures/items/pebble_diorite"
+   },
+   "pebble_granite": {
+      "textures": "textures/items/pebble_granite"
+   },
+   "crusher_blade": {
+      "textures": "textures/items/crusher_blade"
+   },
+   "3d_held_leaf": {
+      "textures": "textures/items/3d_held_leaf"
+   },
+   "seeds_grass": {
+      "textures": "textures/items/seeds_grass"
+   },
+   "fake_bucket": {
+      "textures": "textures/items/fake_bucket"
+   },
+   "fake_scooper": {
+      "textures": "textures/items/fake_scooper"
+   },
+   "cotton_sapling": {
+      "textures": "textures/items/cotton_sapling"
+   },
+   "sieve_held": {
+      "textures": "textures/entity/seave/sieve_held"
+   },
+   "balloons": {
+      "textures": "textures/items/balloons"
+   },
+   "balloons_2": {
+      "textures": "textures/items/balloons_2"
+   },
+   "balloons_3": {
+      "textures": "textures/items/balloons_3"
+   },
+   "balloons_4": {
+      "textures": "textures/items/balloons_4"
+   },
+   "block_buster": {
+      "textures": "textures/items/block_buster"
+   },
+   "xp_vacvault": {
+      "textures": "textures/items/xp_vacvault"
+   },
+   "dirtposter": {
+      "textures": "textures/items/dirtposter"
+   },
+   "seave": {
+      "textures": "textures/items/seave"
+   },
+   "crucible": {
+      "textures": "textures/items/crucible"
+   },
+   "crucible_log": {
+      "textures": "textures/items/crucible_log"
+   },
+   "trade_table": {
+      "textures": "textures/items/trade_table"
+   },
+   "crate": {
+      "textures": "textures/items/crate"
+   },
+   "crusher": {
+      "textures": "textures/items/crusher"
+  }
+ }
+}

@@ -1,0 +1,190 @@
+{
+  "tiers": [
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:quartz",
+              "quantity": {
+                "min": 16,
+                "max": 24
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:quartz"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:quartz",
+              "quantity": {
+                "min": 4,
+                "max": 6
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:chainmail_helmet"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades":[
+      {
+        "wants": [
+          {
+            "item": "minecraft:quartz",
+            "quantity": {
+              "min": 7,
+              "max": 9
+            }
+          }
+        ],
+        "gives": [
+          {
+            "item": "minecraft:quartz"
+          }
+        ]
+      },
+      {
+        "wants": [
+          {
+            "item": "minecraft:quartz",
+            "quantity": {
+              "min": 10,
+              "max": 14
+            }
+          }
+        ],
+        "gives": [
+          {
+            "item": "minecraft:chainmail_chestplate"
+          }
+        ]
+      }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:quartz",
+              "quantity": {
+                "min": 3,
+                "max": 4
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:quartz"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:quartz",
+              "quantity": {
+                "min": 16,
+                "max": 19
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:chainmail_chestplate",
+              "functions": [
+                {
+                  "function": "enchant_with_levels",
+                  "treasure": false,
+                  "levels": {
+                    "min": 5,
+                    "max": 19
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "trades": [
+        {
+          "wants": [
+            {
+              "item": "minecraft:quartz",
+              "quantity": {
+                "min": 5,
+                "max": 7
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:chainmail_boots"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:quartz",
+              "quantity": {
+                "min": 9,
+                "max": 11
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:chainmail_leggings"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:quartz",
+              "quantity": {
+                "min": 5,
+                "max": 7
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:chainmail_helmet"
+            }
+          ]
+        },
+        {
+          "wants": [
+            {
+              "item": "minecraft:quartz",
+              "quantity": {
+                "min": 11,
+                "max": 15
+              }
+            }
+          ],
+          "gives": [
+            {
+              "item": "minecraft:chainmail_chestplate"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

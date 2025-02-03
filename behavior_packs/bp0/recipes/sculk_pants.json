@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "g2crafted:sculk_pants_recipe"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "FFF",
+      "S S",
+      "F F"
+    ],
+    "key": {
+      "F": {
+        "item": "g2crafted:sculk_flesh"
+      },
+      "S": {
+        "item": "g2crafted:sculk_scales"
+      }
+    },
+    "result": {
+      "item": "minecraft:chainmail_leggings",
+      "count": 1
+    }
+  }
+}

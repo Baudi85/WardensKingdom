@@ -1,0 +1,38 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "g2crafted:player_force",
+      "materials": { 
+        "default": "enderman",
+        "light_beams": "entity_beam_additive"
+    },
+    "textures": {
+      "default": "textures/entity/sculck_mobs/sword_explosion"
+    },
+    "geometry": {
+      "default": "geometry.sword_explosion"
+    },
+      "spawn_egg": {
+        "overlay_color": "#d1d6b6",
+        "base_color": "#05625d"
+		},
+    "scripts": {
+      "animate": [
+        "face_player",
+        "open"
+      ]
+    },
+    "animations": {
+      "face_player": "animation.actor.billboard",
+      "open": "animation.sword_explosion.boom"
+    },
+    "sound_effects": {
+      "before_expolsion": "mob.sculk_creeper.before_expolsion",
+      "explosion": "mob.sculk_creeper.explosion",
+      "sound_of_echo": "mob.sculk_creeper.sound_of_echo"
+    },
+    "render_controllers": [ "controller.render.sculk_creeper_cracked" ]
+    }
+  }
+}

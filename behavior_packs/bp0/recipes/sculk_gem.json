@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "g2crafted:sculk_gem_recipe"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      " C ",
+      "CHC",
+      " C "
+    ],
+    "key": {
+      "H": {
+        "item": "g2crafted:warden_heart"
+      },
+      "C": {
+        "item": "g2crafted:sculk_core"
+      }
+    },
+    "result": {
+      "item": "g2crafted:sculk_gem",
+      "count": 1
+    }
+  }
+}

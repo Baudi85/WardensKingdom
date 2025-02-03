@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "g2crafted:sculk_boots_recipe"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "F F",
+      "S S"
+    ],
+    "key": {
+      "F": {
+        "item": "g2crafted:sculk_flesh"
+      },
+      "S": {
+        "item": "g2crafted:sculk_scales"
+      }
+    },
+    "result": {
+      "item": "minecraft:chainmail_boots",
+      "count": 1
+    }
+  }
+}
